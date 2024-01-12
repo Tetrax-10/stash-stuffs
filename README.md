@@ -6,6 +6,8 @@
 
 **Installation**: Download this Repository from [here](https://codeload.github.com/Tetrax-10/stash-stuffs/zip/refs/heads/main). Now copy the respective plugin you want to install and paste them in your [Stash plugin folder](https://docs.stashapp.cc/add-ons/plugins/), Restart Stash app. Done 🎉.
 
+Note: Don't install `Hot Reload` plugin thats for development purpose.
+
 ### 1. Play videos instead of previews
 
 Play videos instead of previews when hovered over scene cards. This works on mobile too.
