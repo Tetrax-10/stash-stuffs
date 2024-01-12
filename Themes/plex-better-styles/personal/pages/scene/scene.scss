@@ -1,0 +1,13 @@
+/* hide scene details useless tabs */
+.nav-link[data-rb-event-key="scene-queue-panel"],
+.nav-link[data-rb-event-key="scene-markers-panel"],
+.nav-link[data-rb-event-key="scene-video-filter-panel"] {
+    display: none;
+}
+
+/* hide player buttons */
+.video-js:has(video[loop="loop"]) .vjs-big-play-button,
+.video-js:has(video[loop="loop"]) .vjs-control-bar,
+.video-js:has(video[loop="loop"]) .vjs-big-button-group {
+    display: none !important;
+}

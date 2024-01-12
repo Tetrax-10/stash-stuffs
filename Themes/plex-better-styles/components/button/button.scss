@@ -1,0 +1,67 @@
+// secondary buttons
+.btn-secondary {
+    color: #eee;
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    border: none;
+}
+
+// disabled buttons
+.btn.disabled,
+.btn:disabled {
+    opacity: 0.5;
+}
+
+// active buttons
+.btn.active {
+    background-color: #2f3335;
+    color: #f5f8fa;
+}
+
+// active button no shadow
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-secondary.dropdown-toggle:focus {
+    box-shadow: unset;
+}
+
+// active button
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: unset;
+}
+
+// active primary button
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    color: #eee;
+    border-color: #eee;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+// top bar nav item on click
+.btn-primary:not(:disabled):not(.disabled):focus {
+    background-color: #2f3335;
+}
+
+// primary button
+.btn-primary.focus,
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+
+// all buttons
+.pagination .btn {
+    border-left: unset;
+    border-right: unset;
+}
+
+// primary button
+.btn-primary {
+    color: #eee;
+    border: none;
+}

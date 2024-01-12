@@ -1,0 +1,5 @@
+// active page nav item
+.btn.active:not(.disabled),
+.btn.active.minimal:not(.disabled) {
+    background-color: #2f3335;
+}

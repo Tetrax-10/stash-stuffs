@@ -1,0 +1,43 @@
+/* fix cards height */
+.zoom-1 .scene-card-preview {
+    height: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .zoom-3 .tag-card-image,
+    .zoom-3 .gallery-card-image {
+        max-height: unset;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    .zoom-1 .image-card-preview {
+        height: 480px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .zoom-1 .image-card-preview {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    body:has(.navbar-nav > div[data-rb-event-key="/images"] > .active) .zoom-3 .image-card-preview,
+    body:has(.navbar-nav > div[data-rb-event-key="/galleries"] > .active) .zoom-3 .image-card-preview {
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    /* fix scenes cards */
+    body:has(.navbar-nav > div[data-rb-event-key="/scenes"] > .active) .zoom-1 {
+        width: 360px;
+    }
+}
+
+// cards background and border radius
+.job-table.card,
+.card {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}

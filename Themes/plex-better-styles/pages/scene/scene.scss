@@ -1,0 +1,36 @@
+/* fix scene details page tags coloring */
+.tag-item {
+    background-color: rgba(31, 35, 38, 0.7);
+    color: #f5f8fa;
+}
+
+// scene details nav button's color
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-bottom: 2px solid;
+    color: #eee;
+}
+.nav-tabs .nav-link:hover {
+    border-bottom: none;
+}
+
+// active save button
+.edit-button.btn-primary {
+    background-color: #137cbd;
+    border-color: #137cbd;
+}
+
+// scrape with dropdown button
+.dropdown-toggle.btn-primary {
+    background-color: #137cbd;
+    border-color: #137cbd;
+}
+
+// edit scene save button container
+#scene-edit-details .edit-buttons-container {
+    background-color: rgba(0, 0, 0, 0.15);
+    margin: unset;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

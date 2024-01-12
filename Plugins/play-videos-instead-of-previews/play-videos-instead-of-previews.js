@@ -1,13 +1,11 @@
 ;(async () => {
-    let observer
-
     async function waitForElement(selector, timeout = null, location = document.body) {
         return new Promise((resolve) => {
             if (document.querySelector(selector)) {
                 return resolve(document.querySelector(selector))
             }
 
-            observer = new MutationObserver(async () => {
+            const observer = new MutationObserver(async () => {
                 if (document.querySelector(selector)) {
                     resolve(document.querySelector(selector))
                     observer.disconnect()
@@ -34,7 +32,6 @@
     }
 
     async function injectVideosAsPreview(timeOut) {
-        observer?.disconnect()
         await waitForElement(".scene-card-preview-video", timeOut)
 
         const allPreviewElement = document.querySelectorAll(".scene-card-preview-video")
@@ -43,13 +40,31 @@
         })
     }
 
-    let previousUrl = window.location.href
-    new MutationObserver(async () => {
-        if (window.location.href !== previousUrl) {
-            previousUrl = window.location.href
-            injectVideosAsPreview(5000)
-        }
-    }).observe(document.body, { subtree: true, childList: true })
+    /////////////////////////////// Main ///////////////////////////////
 
-    injectVideosAsPreview(60000)
+    ;(async function main() {
+        if (!window.stash) {
+            setTimeout(main, 300)
+            return
+        }
+
+        if (await waitForElement(".main > div", 5000)) {
+            let previousUrl = window.location.href
+            setInterval(() => {
+                if (!document.querySelector(".main > div[playVideosInsteadOfPreviews]") || window.location.href !== previousUrl) {
+                    document.querySelector(".main > div").setAttribute("playVideosInsteadOfPreviews", "")
+                    previousUrl = window.location.href
+
+                    if (
+                        stash.matchUrl(window.location, /\/scenes\?/) ||
+                        stash.matchUrl(window.location, /\/performers\/\d+\?/) ||
+                        stash.matchUrl(window.location, /\/studios\/\d+\?/) ||
+                        stash.matchUrl(window.location, /\/tags\/\d+\?/)
+                    ) {
+                        injectVideosAsPreview(5000)
+                    }
+                }
+            }, 100)
+        }
+    })()
 })()

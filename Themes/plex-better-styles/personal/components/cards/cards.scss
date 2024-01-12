@@ -1,0 +1,28 @@
+/* useless info on cards */
+.card > hr,
+.card .scene-card__description,
+.card > .card-popovers {
+    display: none;
+}
+
+/* hide scene card specs */
+.scene-specs-overlay {
+    display: none;
+}
+
+/* hide scene card studio */
+.scene-studio-overlay {
+    display: none;
+}
+
+/* scene card date */
+.scene-card__date {
+    display: none;
+}
+
+// cards title text alignment
+.card-section {
+    align-self: center;
+    margin-bottom: auto;
+    margin-top: auto;
+}

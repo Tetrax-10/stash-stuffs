@@ -1,0 +1,33 @@
+/* search bar bg */
+.query-text-field {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* filter button and menu button fix */
+.mr-2.mb-2.btn-group:not(.dropdown) > .dropdown > button,
+.mx-2.mb-2:not(.dropdown) > .dropdown > button {
+    padding: 0.45rem 0.75rem;
+}
+
+/* tagger button fix */
+.btn-group > .btn:not(:first-child):has(svg[data-icon="tags"]) {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+
+// toolbar button left border fix
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+    margin-left: unset;
+}
+
+// toolbar button right border fix
+.input-group-prepend {
+    margin-right: unset;
+}
+
+// page containers
+.filter-container,
+.operation-container {
+    margin: 10px 0;
+}

@@ -1,0 +1,11 @@
+/* mobile card height */
+@media only screen and (max-width: 767px) {
+    .performer-card-image {
+        height: unset;
+    }
+}
+
+// fix bottom padding
+.card.performer-card {
+    padding: 0 0 0.5rem;
+}

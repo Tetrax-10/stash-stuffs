@@ -1,0 +1,20 @@
+/* hide male performers from preformers tab */
+.performer-card:has(svg[data-icon="mars"]) {
+    display: none;
+}
+
+// performer age alignment
+.performer-card__age {
+    text-align: center;
+}
+
+// hide gender icon
+svg.gender-icon {
+    display: none;
+}
+
+// hide useless tabs
+#performer-tabs-tab-movies,
+#performer-tabs-tab-appearswith {
+    display: none;
+}

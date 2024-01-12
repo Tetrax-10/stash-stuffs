@@ -1,0 +1,6 @@
+name: Hot Reload
+description: Client side code for hot reload
+version: 1.0
+ui:
+    javascript:
+        - reload-client.js

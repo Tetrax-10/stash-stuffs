@@ -1,0 +1,8 @@
+name: Replace Thumbnails With High-Res Images
+description: Replaces thumbnails with original high res images
+version: 1.0
+ui:
+    requires:
+        - StashUserscriptLibrary
+    javascript:
+        - replace-thumbnails-with-images.js

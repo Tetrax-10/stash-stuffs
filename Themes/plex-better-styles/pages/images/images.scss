@@ -1,0 +1,6 @@
+body:has(.navbar-nav > div[data-rb-event-key="/images"] > .active) {
+    // images, gallery card fix
+    .zoom-3 {
+        width: unset;
+    }
+}
