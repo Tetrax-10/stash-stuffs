@@ -27,6 +27,10 @@ You can see the difference in sharpness, details and colors.
     <td><img src="./assets/replace-thumbnails-with-images/thumbnail.jpeg" style="width: 427px; height: auto;"></td>
     <td><img src="./assets/replace-thumbnails-with-images/original.jpg" style="width: 427px; height: auto;"></td>
   </tr>
+  <tr>
+    <td><img src="./assets/replace-thumbnails-with-images/closeup/thumbnail.jpeg" style="width: 427px; height: auto;"></td>
+    <td><img src="./assets/replace-thumbnails-with-images/closeup/original.jpg" style="width: 427px; height: auto;"></td>
+  </tr>
 </table>
 
 </br>
