@@ -43,6 +43,14 @@ You can see the difference in sharpness, details and colors.
 
 A modified version of [Plex theme](https://docs.stashapp.cc/user-interface-ui/themes/plex/) developed by Stash developers.
 
+### Installation
+
+Paste this in your [custom css](https://docs.stashapp.cc/user-interface-ui/custom-css-snippets/)
+
+```css
+@import url("https://tetrax-10.github.io/stash-stuffs/plex-better-styles.css");
+```
+
 **Modifications**:
 
 1. Better **image**, **gallery** cards (flexible according to different aspect ratio)
