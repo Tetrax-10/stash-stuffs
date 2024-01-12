@@ -10,11 +10,13 @@
 
 Play videos instead of previews when hovered over scene cards. This works on mobile too.
 
-<img src="./assets/play-videos-instead-of-previews/demo.gif" style="border-radius:10px;"></img>
+![demo](./assets/play-videos-instead-of-previews/demo.gif)
 
 ### 2. Replace Thumbnails With High-Res Images
 
-Replaces thumbnails with original high res images in Galleries, Images and Performer tab
+Replaces thumbnails with original high res images in Galleries, Images and Performer tab.
+
+You can see the difference in sharpness, details and colors.
 
 <table>
   <tr align="center">
@@ -22,8 +24,8 @@ Replaces thumbnails with original high res images in Galleries, Images and Perfo
      <td>Replaced Image by the plugin</td>
   </tr>
   <tr>
-    <td><img src="./assets/replace-thumbnails-with-images/thumbnail.jpeg" style="border-radius:5px;"></td>
-    <td><img src="./assets/replace-thumbnails-with-images/original.jpg" style="border-radius:5px;"></td>
+    <td><img src="./assets/replace-thumbnails-with-images/thumbnail.jpeg" style="width: 427px; height: 640px;"></td>
+    <td><img src="./assets/replace-thumbnails-with-images/original.jpg" style="width: 427px; height: 640px;"></td>
   </tr>
 </table>
 
@@ -41,7 +43,7 @@ A modified and maintained version of [Plex theme](https://docs.stashapp.cc/user-
 2. Fixed UI bugs (toolbar, settings, etc...)
 3. Uniform Colors (tags, links, settings cards, etc...)
 
-<img src="./assets/plex-better-styles/images.png" style="border-radius:10px;"></img>
-<img src="./assets/plex-better-styles/performers.png" style="border-radius:10px;"></img>
-<img src="./assets/plex-better-styles/scenes.png" style="border-radius:10px;"></img>
-<img src="./assets/plex-better-styles/settings.png" style="border-radius:10px;"></img>
+![images](./assets/plex-better-styles/images.png)
+![performers](./assets/plex-better-styles/performers.png)
+![scenes](./assets/plex-better-styles/scenes.png)
+![settings](./assets/plex-better-styles/settings.png)
