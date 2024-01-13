@@ -15,22 +15,21 @@
     border-bottom: none;
 }
 
-// active save button
-.edit-button.btn-primary {
-    background-color: #137cbd;
-    border-color: #137cbd;
-}
-
-// scrape with dropdown button
-.dropdown-toggle.btn-primary {
-    background-color: #137cbd;
-    border-color: #137cbd;
-}
-
 // edit scene save button container
 #scene-edit-details .edit-buttons-container {
     background-color: rgba(0, 0, 0, 0.15);
     margin: unset;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+// stash id left container
+.stash-id-pill span {
+    background-color: #d49c21;
+    color: #000;
+}
+
+// stash id right container
+.stash-id-pill a {
+    background-color: rgba(0, 0, 0, 0.15);
 }

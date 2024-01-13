@@ -61,7 +61,16 @@
 }
 
 // primary button
+// success button
+.btn-success,
 .btn-primary {
-    color: #eee;
-    border: none;
+    &.disabled,
+    &:disabled,
+    &:hover,
+    & {
+        color: #000;
+        background-color: #d49c21;
+        font-weight: 500;
+        border: none;
+    }
 }

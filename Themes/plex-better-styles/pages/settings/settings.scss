@@ -12,3 +12,35 @@
 #settings-container .card {
     background-color: rgba(0, 0, 0, 0.15);
 }
+
+// settings page tabs
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: #d49c21;
+}
+
+// settings page active tab
+#settings-menu-container {
+    .nav-pills .nav-link.active,
+    .nav-pills .show > .nav-link {
+        color: #000;
+        font-weight: 500;
+    }
+}
+
+// code
+code {
+    font-size: unset;
+    color: #f7c600;
+}
+
+// toggle button
+.custom-control-input:checked ~ .custom-control-label:before {
+    color: #fff;
+    border-color: #d49c21;
+    background-color: #d49c21;
+}
+
+#settings-menu-container a:hover {
+    color: #f7c600;
+}

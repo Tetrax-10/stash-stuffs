@@ -84,3 +84,48 @@ div.dropdown-menu button:hover {
 div[class*="-divider"].d-none.d-xl-block:not(.scene-divider) {
     display: none !important;
 }
+
+// all a tags
+a:hover,
+a {
+    color: #d49c21;
+}
+
+// range slider
+input[type="range"].zoom-slider::-webkit-slider-runnable-track {
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 25px;
+}
+input[type="range"].zoom-slider::-webkit-slider-thumb {
+    background: #ddd;
+    border-radius: 50%;
+}
+input[type="range"].zoom-slider:focus::-webkit-slider-runnable-track {
+    background: hsla(0, 0%, 100%, 0.2);
+}
+input[type="range"].zoom-slider::-moz-range-track {
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 25px;
+}
+input[type="range"].zoom-slider::-moz-range-thumb {
+    background: #ddd;
+    border-radius: 25px;
+}
+input[type="range"].zoom-slider::-ms-fill-lower {
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 50px;
+}
+input[type="range"].zoom-slider::-ms-fill-upper {
+    background: hsla(0, 0%, 100%, 0.2);
+    border-radius: 50px;
+}
+input[type="range"].zoom-slider::-ms-thumb {
+    background: #ddd;
+    border-radius: 50%;
+}
+input[type="range"].zoom-slider:focus::-ms-fill-lower {
+    background: hsla(0, 0%, 100%, 0.2);
+}
+input[type="range"].zoom-slider:focus::-ms-fill-upper {
+    background: hsla(0, 0%, 100%, 0.2);
+}

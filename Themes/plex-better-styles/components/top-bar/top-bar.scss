@@ -1,5 +1,44 @@
-// active page nav item
-.btn.active:not(.disabled),
-.btn.active.minimal:not(.disabled) {
-    background-color: #2f3335;
+// active page nav item (desktop)
+@media (min-width: 576px) {
+    .top-nav {
+        .btn.active:not(.disabled),
+        .btn.active.minimal:not(.disabled) {
+            background-color: rgba(138, 155, 168, 0.15);
+        }
+        a:active {
+            background-color: rgba(138, 155, 168, 0.15) !important;
+        }
+
+        // Stash button no bg on hover
+        .navbar-brand {
+            a,
+            button {
+                &:focus,
+                &:hover,
+                &:active {
+                    background-color: unset !important;
+                }
+            }
+        }
+    }
+}
+
+// active page nav item (mobile)
+@media (max-width: 576px) {
+    .btn.active:not(.disabled),
+    .btn.active.minimal:not(.disabled) {
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+}
+
+// top bar container
+.top-nav.bg-dark {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) saturate(60%);
+}
+
+// top bar (navbar)
+.navbar-collapse.bg-dark {
+    background-color: unset !important;
 }

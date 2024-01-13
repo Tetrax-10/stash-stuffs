@@ -59,7 +59,8 @@
                         stash.matchUrl(window.location, /\/scenes\?/) ||
                         stash.matchUrl(window.location, /\/performers\/\d+\?/) ||
                         stash.matchUrl(window.location, /\/studios\/\d+\?/) ||
-                        stash.matchUrl(window.location, /\/tags\/\d+\?/)
+                        stash.matchUrl(window.location, /\/tags\/\d+\?/) ||
+                        stash.matchUrl(window.location, /\/$/)
                     ) {
                         injectVideosAsPreview(5000)
                     }

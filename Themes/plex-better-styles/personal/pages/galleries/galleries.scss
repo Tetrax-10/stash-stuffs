@@ -1,0 +1,4 @@
+// hide useless tabs
+.nav-item:has(> a[data-rb-event-key="gallery-chapter-panel"]) {
+    display: none;
+}

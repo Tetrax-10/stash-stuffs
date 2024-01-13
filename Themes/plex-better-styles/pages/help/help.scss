@@ -1,0 +1,21 @@
+.modal-header,
+.modal-body,
+.modal-footer {
+    background-image: url("https://user-images.githubusercontent.com/63812189/79506691-4af78900-7feb-11ea-883e-87b8e05ceb1c.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #3f4245;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.markdown blockquote,
+.markdown pre,
+.markdown table tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.markdown code {
+    background-color: unset !important;
+    color: #f7c600;
+}

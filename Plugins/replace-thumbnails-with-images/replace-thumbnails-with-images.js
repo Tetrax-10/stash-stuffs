@@ -59,10 +59,11 @@
                         stash.matchUrl(window.location, /\/images\?/) ||
                         stash.matchUrl(window.location, /\/galleries\/\d+\?/) ||
                         stash.matchUrl(window.location, /\/galleries\/\d+\/add/) ||
-                        stash.matchUrl(window.location, /\/performers\/\d+\/images/)
+                        stash.matchUrl(window.location, /\/performers\/\d+\/images/) ||
+                        stash.matchUrl(window.location, /\/$/)
                     ) {
                         replaceThumbnailsWithImages(5000, ".image-card-preview-image")
-                    } else if (stash.matchUrl(window.location, /\/galleries\?/) || stash.matchUrl(window.location, /\/performers\/\d+\/galleries/)) {
+                    } else if (stash.matchUrl(window.location, /\/galleries\?/) || stash.matchUrl(window.location, /\/performers\/\d+\/galleries/) || stash.matchUrl(window.location, /\/$/)) {
                         replaceThumbnailsWithImages(5000, ".gallery-card-image")
                     }
                 }

@@ -21,6 +21,14 @@
     .gallery-card-image {
         max-height: unset !important;
     }
+
+    // home page cards aspect ratio fix
+    .slick-slider .image-card-preview {
+        height: 24rem !important;
+    }
+    .slick-slide .card {
+        height: auto;
+    }
 }
 
 // cards in desktop
