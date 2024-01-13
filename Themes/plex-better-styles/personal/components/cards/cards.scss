@@ -26,3 +26,31 @@
     margin-bottom: auto;
     margin-top: auto;
 }
+
+.image-card {
+    // remove image title from card
+    .image-card-preview {
+        margin-bottom: 0;
+    }
+    .card-section {
+        display: none;
+    }
+}
+
+// remove extra padding in gallery cards
+.gallery-card.card {
+    padding-bottom: 0;
+}
+.gallery-card__details {
+    margin-bottom: 0;
+}
+
+// gallery card title extra margin
+.gallery-card .TruncatedText {
+    margin: 5px 0;
+}
+
+// image cards inside a gallery
+.zoom-1 .image-card-preview {
+    height: 480px;
+}

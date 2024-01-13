@@ -1,37 +1,39 @@
-/* fix cards height */
-.zoom-1 .scene-card-preview {
-    height: auto;
-}
+// cards in mobile
+@media (max-width: 576px) {
+    // fix scene cards height
+    .scene-card-preview {
+        height: auto !important;
+    }
 
-@media only screen and (max-width: 767px) {
-    .zoom-3 .tag-card-image,
-    .zoom-3 .gallery-card-image {
-        max-height: unset;
+    // image card fit to image aspect ratio
+    .image-card.card,
+    .gallery-card.card {
+        width: unset;
+    }
+
+    // image card remove fixed height
+    .image-card-preview {
+        height: auto !important;
+    }
+
+    // tag, gallery card remove fixed height
+    .tag-card-image,
+    .gallery-card-image {
+        max-height: unset !important;
     }
 }
 
-@media only screen and (min-width: 767px) {
-    .zoom-1 .image-card-preview {
-        height: 480px;
+// cards in desktop
+@media (min-width: 576px) {
+    // image, gallery card fit to image aspect ratio
+    .image-card.card,
+    .gallery-card.card {
+        width: unset;
     }
-}
-@media only screen and (max-width: 767px) {
-    .zoom-1 .image-card-preview {
-        height: auto;
-    }
-}
 
-@media only screen and (max-width: 767px) {
-    body:has(.navbar-nav > div[data-rb-event-key="/images"] > .active) .zoom-3 .image-card-preview,
-    body:has(.navbar-nav > div[data-rb-event-key="/galleries"] > .active) .zoom-3 .image-card-preview {
-        height: auto;
-    }
-}
-
-@media only screen and (min-width: 767px) {
-    /* fix scenes cards */
-    body:has(.navbar-nav > div[data-rb-event-key="/scenes"] > .active) .zoom-1 {
-        width: 360px;
+    // fix not portrait image card when on zoom 0
+    .zoom-0 .image-card-preview:not(.portrait) {
+        height: 180px;
     }
 }
 

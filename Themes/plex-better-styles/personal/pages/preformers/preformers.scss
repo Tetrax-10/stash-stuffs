@@ -18,3 +18,16 @@ svg.gender-icon {
 #performer-tabs-tab-appearswith {
     display: none;
 }
+
+// hide performer sticky details
+.sticky.detail-header {
+    display: none;
+}
+
+// top extra margin in performer page
+#movie-page,
+#performer-page,
+#studio-page,
+#tag-page {
+    margin-top: -1rem;
+}

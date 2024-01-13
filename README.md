@@ -45,11 +45,7 @@ A modified version of [Plex theme](https://docs.stashapp.cc/user-interface-ui/th
 
 ### Installation
 
-Paste this in your [custom css](https://docs.stashapp.cc/user-interface-ui/custom-css-snippets/)
-
-```css
-@import url("https://tetrax-10.github.io/stash-stuffs/plex-better-styles.css");
-```
+Paste this [css code](https://tetrax-10.github.io/stash-stuffs/plex-better-styles.css) in your [custom css](https://docs.stashapp.cc/user-interface-ui/custom-css-snippets/)
 
 **Modifications**:
 
