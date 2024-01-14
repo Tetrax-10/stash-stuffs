@@ -67,8 +67,7 @@ jobs:
                   path: dist
                   ref: dist
                   fetch-depth: "0"
-
-            - name: Run build.sh
+            # Run "git update-index --chmod=+x build.sh" and commit changes to grant elevated permissions so build.sh runs without any errors
             - run: |
                   cd dist
                   ./build.sh ../_site/release
