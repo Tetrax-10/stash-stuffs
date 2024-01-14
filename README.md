@@ -2,11 +2,17 @@
 
 **Stuffs I made for Stash app**
 
+### Installation
+
+Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?tab=plugins) and click `Add Source`, And fill the popup with these values:
+
+1. Name: `Tetrax Repo`
+2. Source URL: `https://tetrax-10.github.io/stash-stuffs/release/index.yml`
+3. Local Path: `tetrax-repo`
+
+![add-repo](./assets//installation//add-repo.png)
+
 ## Plugins
-
-**Installation**: Download this Repository from [here](https://codeload.github.com/Tetrax-10/stash-stuffs/zip/refs/heads/main). Now copy the respective plugin you want to install and paste them in your [Stash plugin folder](https://docs.stashapp.cc/add-ons/plugins/), Restart Stash app. Done 🎉.
-
-Note: Don't install `Hot Reload` plugin thats for development purpose.
 
 ### 1. Play videos instead of previews
 
@@ -42,10 +48,6 @@ You can see the difference in sharpness, details and colors.
 ### 1. Plex Better Styles
 
 A modified version of [Stash-Plex theme](https://docs.stashapp.cc/user-interface-ui/themes/plex/) which was originally developed by [Fidelio](https://github.com/f1delio).
-
-### Installation
-
-Paste this [css code](https://tetrax-10.github.io/stash-stuffs/plex-better-styles.css) in your [custom css](https://docs.stashapp.cc/user-interface-ui/custom-css-snippets/)
 
 **Modifications**:
 
