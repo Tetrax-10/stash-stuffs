@@ -46,7 +46,7 @@ jobs:
                   rm -rf dist/Plugins/hot-reload
 
             - name: Copy build.sh
-              run: cp -r build.sh dist/
+              run: cp -r .github/workflows/build.sh dist/
 
             - name: Publish to dist branch
               uses: s0/git-publish-subdir-action@develop
