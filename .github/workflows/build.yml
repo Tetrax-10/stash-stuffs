@@ -1,18 +1,26 @@
-name: Build and Publish Theme
+name: Build and Publish Plugins and Themes
 
 on:
     push:
         paths:
-            - .github/**
+            - Plugins/**
             - Themes/**
+            - .github/**
     pull_request:
         paths:
-            - .github/**
+            - Plugins/**
             - Themes/**
+            - .github/**
+    workflow_dispatch:
+
+permissions:
+    contents: write
+    pages: write
+    id-token: write
 
 jobs:
     build_and_publish:
-        name: Setup Linux environment
+        name: build plugins and themes
         runs-on: ubuntu-latest
 
         steps:
@@ -27,8 +35,16 @@ jobs:
             - name: Install repository dependencies
               run: npm ci
 
-            - name: Build theme
-              run: npm run build-theme
+            - name: Build themes
+              run: |
+                  npm run build-theme
+                  cp -r Themes/plex-better-styles/plex-better-styles.yml dist/Themes/plex-better-styles/
+
+            - name: Copy plugins
+              run: cp -r Plugins dist/Plugins/
+
+            - name: Copy build.sh
+              run: cp -r .github/workflows/build.sh dist/
 
             - name: Publish theme
               uses: s0/git-publish-subdir-action@develop
@@ -37,3 +53,30 @@ jobs:
                   BRANCH: dist
                   FOLDER: "dist"
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    build:
+        name: build.sh
+        runs-on: ubuntu-latest
+        needs: build_and_publish
+        steps:
+            - name: Checkout main
+              uses: actions/checkout@v3
+              with:
+                  path: dist
+                  ref: dist
+                  fetch-depth: "0"
+            - run: |
+                  cd dist
+                  ./build.sh ../_site/release
+            - uses: actions/upload-pages-artifact@v2
+
+    deploy:
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        runs-on: ubuntu-latest
+        needs: build
+        steps:
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v2

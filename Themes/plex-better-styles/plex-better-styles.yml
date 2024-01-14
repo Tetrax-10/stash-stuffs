@@ -1,0 +1,6 @@
+name: Theme - Plex Better Styles
+description: A modified version of Stash-Plex theme
+version: 1.0
+ui:
+    css:
+        - plex-better-styles.css

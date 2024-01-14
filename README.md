@@ -41,7 +41,7 @@ You can see the difference in sharpness, details and colors.
 
 ### 1. Plex Better Styles
 
-A modified version of [Plex theme](https://docs.stashapp.cc/user-interface-ui/themes/plex/) developed by Stash developers.
+A modified version of [Stash-Plex theme](https://docs.stashapp.cc/user-interface-ui/themes/plex/) which was originally developed by [Fidelio](https://github.com/f1delio).
 
 ### Installation
 

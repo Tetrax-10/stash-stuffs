@@ -7,7 +7,7 @@
     "scripts": {
         "watch-theme": "node Plugins/hot-reload/reload-server.js --Themes",
         "watch-personal-theme": "node Plugins/hot-reload/reload-server.js --Themes:personal",
-        "build-theme": "sass Themes/plex-better-styles/main.scss dist/plex-better-styles.css --no-source-map --no-error-css --style=compressed",
+        "build-theme": "sass Themes/plex-better-styles/main.scss dist/Themes/plex-better-styles/plex-better-styles.css --no-source-map --no-error-css --style=compressed",
         "build-theme-local": "sass Themes/plex-better-styles/main.scss D:/Apps/Stash/custom.css --no-source-map --no-error-css",
         "build-personal-theme-local": "sass Themes/plex-better-styles/main-personal.scss D:/Apps/Stash/custom.css --no-source-map --no-error-css",
         "watch-plugin": "node Plugins/hot-reload/reload-server.js --Plugins",
