@@ -70,9 +70,6 @@ jobs:
 
             - name: Run build.sh
             - run: |
-                  chmod -c -R +rX "_site/" | while read line; do
-                    echo "::warning title=Invalid file permissions automatically fixed::$line"
-                  done
                   cd dist
                   ./build.sh ../_site/release
             - uses: actions/upload-pages-artifact@v2
