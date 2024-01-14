@@ -41,7 +41,9 @@ jobs:
                   cp -r Themes/plex-better-styles/plex-better-styles.yml dist/Themes/plex-better-styles/
 
             - name: Copy plugins
-              run: cp -r Plugins dist/Plugins/
+              run: |
+                  cp -r Plugins dist/Plugins/
+                  rm -rf dist/Plugins/hot-reload
 
             - name: Copy build.sh
               run: cp -r .github/workflows/build.sh dist/
