@@ -20,7 +20,7 @@ permissions:
 
 jobs:
     build_and_publish:
-        name: build plugins and themes
+        name: Build plugins and themes
         runs-on: ubuntu-latest
 
         steps:
@@ -46,9 +46,9 @@ jobs:
                   rm -rf dist/Plugins/hot-reload
 
             - name: Copy build.sh
-              run: cp -r .github/workflows/build.sh dist/
+              run: cp -r build.sh dist/
 
-            - name: Publish theme
+            - name: Publish to dist branch
               uses: s0/git-publish-subdir-action@develop
               env:
                   REPO: self
@@ -57,22 +57,28 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     build:
-        name: build.sh
+        name: Run build.sh
         runs-on: ubuntu-latest
         needs: build_and_publish
         steps:
-            - name: Checkout main
+            - name: Checkout dist
               uses: actions/checkout@v3
               with:
                   path: dist
                   ref: dist
                   fetch-depth: "0"
+
+            - name: Run build.sh
             - run: |
+                  chmod -c -R +rX "_site/" | while read line; do
+                    echo "::warning title=Invalid file permissions automatically fixed::$line"
+                  done
                   cd dist
                   ./build.sh ../_site/release
             - uses: actions/upload-pages-artifact@v2
 
     deploy:
+        name: Publish plugins and themes
         environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }}
