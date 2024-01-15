@@ -41,3 +41,11 @@
 .navbar-collapse.bg-dark {
     background-color: unset !important;
 }
+
+// top bar right side buttons
+.top-nav .navbar-buttons {
+    button.minimal:hover:not(:disabled),
+    a.minimal:hover:not(:disabled) {
+        background: unset;
+    }
+}

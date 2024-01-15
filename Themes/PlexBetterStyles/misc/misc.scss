@@ -86,6 +86,7 @@ a,
 .btn-link:hover,
 .btn-link {
     color: #f7c600;
+    text-decoration: none;
 }
 
 // range slider
@@ -142,11 +143,12 @@ input[type="range"].zoom-slider:focus::-ms-fill-upper {
     color: #fff !important;
 }
 
-// all scrollbar
-.tab-content,
-.scene-tabs,
-html {
+// hide all scrollbar
+* {
     scrollbar-width: none !important;
+}
+::-webkit-scrollbar {
+    display: none !important;
 }
 
 // star rating
