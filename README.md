@@ -10,7 +10,7 @@ Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?
 2. Source URL: `https://tetrax-10.github.io/stash-stuffs/release/index.yml`
 3. Local Path: `tetrax-repo`
 
-<img src="./assets//installation//add-repo.png" style="width: 400px; height: auto;">
+<img src="./assets/installation/add-repo.png" style="width: 400px; height: auto;">
 
 ## Plugins
 
