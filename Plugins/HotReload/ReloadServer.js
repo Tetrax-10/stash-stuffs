@@ -64,7 +64,7 @@ buildAndReload()
 const itemsToIgnore = []
 
 if (type === "Plugins") {
-    itemsToIgnore.push("**/*.yml", "**/reload-server.js")
+    itemsToIgnore.push("**/*.yml", "**/reloadServer.js")
 } else if (type === "Themes" && mode !== "personal") {
     itemsToIgnore.push("**/personal/**", "**/main-personal.scss")
 }

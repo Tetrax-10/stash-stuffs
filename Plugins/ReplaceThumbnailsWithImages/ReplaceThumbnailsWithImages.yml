@@ -3,6 +3,6 @@ description: Replaces thumbnails with original high res images
 version: 1.0
 ui:
     requires:
-        - Tetrax-userscript-library
+        - TetraxUserscriptLibrary
     javascript:
-        - replace-thumbnails-with-images.js
+        - ReplaceThumbnailsWithImages.js

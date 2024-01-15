@@ -38,12 +38,12 @@ jobs:
             - name: Build themes
               run: |
                   npm run build-theme
-                  cp -r Themes/plex-better-styles/plex-better-styles.yml dist/Themes/plex-better-styles/
+                  cp -r Themes/PlexBetterStyles/PlexBetterStyles.yml dist/Themes/PlexBetterStyles/
 
             - name: Copy plugins
               run: |
                   cp -r Plugins dist/Plugins/
-                  rm -rf dist/Plugins/hot-reload
+                  rm -rf dist/Plugins/HotReload
 
             - name: Copy build.sh
               run: cp -r .github/workflows/build.sh dist/
