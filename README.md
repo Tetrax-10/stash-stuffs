@@ -55,7 +55,10 @@ A modified version of [Stash-Plex theme](https://docs.stashapp.cc/user-interface
 2. Fixed UI bugs (toolbar, settings, etc...)
 3. Uniform Colors (tags, links, settings cards, etc...)
 
-![images](./assets/plex-better-styles/images.png)
+![galleries](./assets/plex-better-styles/galleries.png)
 ![performers](./assets/plex-better-styles/performers.png)
+![images](./assets/plex-better-styles/images.png)
 ![scenes](./assets/plex-better-styles/scenes.png)
 ![settings](./assets/plex-better-styles/settings.png)
+![help](./assets/plex-better-styles/help.png)
+![tags](./assets/plex-better-styles/tags.png)
