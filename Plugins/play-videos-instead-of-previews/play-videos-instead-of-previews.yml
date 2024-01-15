@@ -3,6 +3,6 @@ description: Plays videos instead of previews in scene cards
 version: 1.0
 ui:
     requires:
-        - StashUserscriptLibrary
+        - tetrax-userscript-library
     javascript:
         - play-videos-instead-of-previews.js

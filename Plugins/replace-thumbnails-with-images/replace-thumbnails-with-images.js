@@ -1,38 +1,13 @@
 ;(async () => {
-    async function waitForElement(selector, timeout = null, location = document.body) {
-        return new Promise((resolve) => {
-            if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector))
-            }
-
-            const observer = new MutationObserver(async () => {
-                if (document.querySelector(selector)) {
-                    resolve(document.querySelector(selector))
-                    observer.disconnect()
-                } else {
-                    if (timeout) {
-                        async function timeOver() {
-                            return new Promise((resolve) => {
-                                setTimeout(() => {
-                                    observer.disconnect()
-                                    resolve(false)
-                                }, timeout)
-                            })
-                        }
-                        resolve(await timeOver())
-                    }
-                }
-            })
-
-            observer.observe(location, {
-                childList: true,
-                subtree: true,
-            })
-        })
+    while (!window.TetraxUSL.stash) {
+        await new Promise((resolve) => setTimeout(resolve, 100))
     }
 
+    const Stash = window.TetraxUSL.stash
+    const Utils = window.TetraxUSL.utils
+
     async function replaceThumbnailsWithImages(timeOut, className) {
-        await waitForElement(className, timeOut)
+        await Utils.ui.waitForElement(className, timeOut)
 
         const allThumbnailElement = document.querySelectorAll(className)
         allThumbnailElement.forEach((element) => {
@@ -42,32 +17,25 @@
 
     /////////////////////////////// Main ///////////////////////////////
 
-    ;(async function main() {
-        if (!window.stash) {
-            setTimeout(main, 300)
-            return
-        }
+    if (await Utils.ui.waitForElement(".main > div", 5000)) {
+        let previousUrl = window.location.href
+        setInterval(() => {
+            if (!document.querySelector(".main > div[replaceThumbnailsWithImages]") || window.location.href !== previousUrl) {
+                document.querySelector(".main > div").setAttribute("replaceThumbnailsWithImages", "")
+                previousUrl = window.location.href
 
-        if (await waitForElement(".main > div", 5000)) {
-            let previousUrl = window.location.href
-            setInterval(() => {
-                if (!document.querySelector(".main > div[replaceThumbnailsWithImages]") || window.location.href !== previousUrl) {
-                    document.querySelector(".main > div").setAttribute("replaceThumbnailsWithImages", "")
-                    previousUrl = window.location.href
-
-                    if (
-                        stash.matchUrl(window.location, /\/images\?/) ||
-                        stash.matchUrl(window.location, /\/galleries\/\d+\?/) ||
-                        stash.matchUrl(window.location, /\/galleries\/\d+\/add/) ||
-                        stash.matchUrl(window.location, /\/performers\/\d+\/images/) ||
-                        stash.matchUrl(window.location, /\/$/)
-                    ) {
-                        replaceThumbnailsWithImages(5000, ".image-card-preview-image")
-                    } else if (stash.matchUrl(window.location, /\/galleries\?/) || stash.matchUrl(window.location, /\/performers\/\d+\/galleries/) || stash.matchUrl(window.location, /\/$/)) {
-                        replaceThumbnailsWithImages(5000, ".gallery-card-image")
-                    }
+                if (
+                    Stash.matchUrl(window.location, /\/images\?/) ||
+                    Stash.matchUrl(window.location, /\/galleries\/\d+\?/) ||
+                    Stash.matchUrl(window.location, /\/galleries\/\d+\/add/) ||
+                    Stash.matchUrl(window.location, /\/performers\/\d+\/images/) ||
+                    Stash.matchUrl(window.location, /\/$/)
+                ) {
+                    replaceThumbnailsWithImages(5000, ".image-card-preview-image")
+                } else if (Stash.matchUrl(window.location, /\/galleries\?/) || Stash.matchUrl(window.location, /\/performers\/\d+\/galleries/) || Stash.matchUrl(window.location, /\/$/)) {
+                    replaceThumbnailsWithImages(5000, ".gallery-card-image")
                 }
-            }, 100)
-        }
-    })()
+            }
+        }, 100)
+    }
 })()
