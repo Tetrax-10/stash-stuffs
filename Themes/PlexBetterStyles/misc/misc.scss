@@ -1,6 +1,6 @@
 // app background image
 body {
-    background-image: url("https://user-images.githubusercontent.com/63812189/79506691-4af78900-7feb-11ea-883e-87b8e05ceb1c.png");
+    background-image: url("https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/Themes/PlexBetterStyles/assets/plex-background.png");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -10,7 +10,7 @@ body {
     background-position: center;
 }
 #root {
-    background: rgba(0, 0, 0, 0) url("https://user-images.githubusercontent.com/63812189/79506696-4c28b600-7feb-11ea-8176-12a46454d87a.png") repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0) url("https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/Themes/PlexBetterStyles/assets/plex-noise.png") repeat scroll 0% 0%;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -62,7 +62,7 @@ option {
 div.react-select__menu,
 div.dropdown-menu {
     background-color: unset !important;
-    background: url("https://user-images.githubusercontent.com/63812189/79506691-4af78900-7feb-11ea-883e-87b8e05ceb1c.png") !important;
+    background: url("https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/Themes/PlexBetterStyles/assets/plex-background.png") !important;
 }
 div.dropdown-menu .bg-secondary {
     background-color: unset !important;
@@ -147,4 +147,11 @@ input[type="range"].zoom-slider:focus::-ms-fill-upper {
 .scene-tabs,
 html {
     scrollbar-width: none !important;
+}
+
+// star rating
+.rating-stars {
+    .btn-secondary {
+        background-color: unset !important;
+    }
 }
