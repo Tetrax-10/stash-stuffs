@@ -1,5 +1,5 @@
 ;(async () => {
-    while (!window.TetraxUSL.stash) {
+    while (!window.TetraxUSL?.stash) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
 
