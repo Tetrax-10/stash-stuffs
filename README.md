@@ -10,7 +10,7 @@ Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?
 2. Source URL: `https://tetrax-10.github.io/stash-stuffs/release/index.yml`
 3. Local Path: `tetrax-repo`
 
-![add-repo](./assets//installation//add-repo.png)
+<img src="./assets//installation//add-repo.png" style="width: 400px; height: auto;">
 
 ## Plugins
 
@@ -55,10 +55,30 @@ A modified version of [Stash-Plex theme](https://docs.stashapp.cc/user-interface
 2. Fixed UI bugs (toolbar, settings, etc...)
 3. Uniform Colors (tags, links, settings cards, etc...)
 
+### Galleries
+
 ![galleries](./assets/plex-better-styles/galleries.png)
+
+### Performers
+
 ![performers](./assets/plex-better-styles/performers.png)
+
+### Images
+
 ![images](./assets/plex-better-styles/images.png)
+
+### Scenes
+
 ![scenes](./assets/plex-better-styles/scenes.png)
+
+### Settings
+
 ![settings](./assets/plex-better-styles/settings.png)
+
+### Help
+
 ![help](./assets/plex-better-styles/help.png)
+
+### Tags
+
 ![tags](./assets/plex-better-styles/tags.png)
