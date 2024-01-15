@@ -1,4 +1,5 @@
 name: Play Videos Instead Of Previews
+# requires: TetraxUserscriptLibrary
 description: Plays videos instead of previews in scene cards
 version: 1.0
 ui:

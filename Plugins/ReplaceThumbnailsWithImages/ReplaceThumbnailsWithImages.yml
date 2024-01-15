@@ -1,4 +1,5 @@
 name: Replace Thumbnails With High-Res Images
+# requires: TetraxUserscriptLibrary
 description: Replaces thumbnails with original high res images
 version: 1.0
 ui:
