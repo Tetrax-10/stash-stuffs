@@ -17,11 +17,6 @@ body {
     z-index: 2;
 }
 
-// all elements
-* {
-    scrollbar-color: hsla(0, 0%, 100%, 0.2) transparent;
-}
-
 // alter classes
 .bg-dark {
     background-color: #1f2326 !important;
@@ -145,4 +140,11 @@ input[type="range"].zoom-slider:focus::-ms-fill-upper {
 }
 .tag-item > button {
     color: #fff !important;
+}
+
+// all scrollbar
+.tab-content,
+.scene-tabs,
+html {
+    scrollbar-width: none !important;
 }

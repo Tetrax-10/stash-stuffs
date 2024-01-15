@@ -1,15 +1,15 @@
-/* search bar bg */
+// search bar bg
 .query-text-field {
     background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
-/* filter button and menu button fix */
+// filter button and menu button fix
 .mr-2.mb-2.btn-group:not(.dropdown) > .dropdown > button,
 .mx-2.mb-2:not(.dropdown) > .dropdown > button {
     padding: 0.45rem 0.75rem;
 }
 
-/* tagger button fix */
+// tagger button fix
 .btn-group > .btn:not(:first-child):has(svg[data-icon="tags"]) {
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem;

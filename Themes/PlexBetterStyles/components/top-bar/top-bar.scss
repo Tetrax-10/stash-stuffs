@@ -29,13 +29,16 @@
     .btn.active.minimal:not(.disabled) {
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(10px) saturate(60%);
     }
 }
 
 // top bar container
 .top-nav.bg-dark {
-    background-color: #333c3c !important;
+    background-image: url("https://user-images.githubusercontent.com/63812189/79506691-4af78900-7feb-11ea-883e-87b8e05ceb1c.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 // top bar (navbar)

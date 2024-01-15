@@ -1,21 +1,21 @@
-/* useless info on cards */
+// useless info on cards
 .card > hr,
 .card .scene-card__description,
 .card > .card-popovers {
     display: none;
 }
 
-/* hide scene card specs */
+// hide scene card specs
 .scene-specs-overlay {
     display: none;
 }
 
-/* hide scene card studio */
+// hide scene card studio
 .scene-studio-overlay {
     display: none;
 }
 
-/* scene card date */
+// scene card date
 .scene-card__date {
     display: none;
 }

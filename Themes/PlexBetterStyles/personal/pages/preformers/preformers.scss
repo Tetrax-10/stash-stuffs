@@ -1,4 +1,4 @@
-/* hide male performers from preformers tab */
+// hide male performers from preformers tab
 .performer-card:has(svg[data-icon="mars"]) {
     display: none;
 }
