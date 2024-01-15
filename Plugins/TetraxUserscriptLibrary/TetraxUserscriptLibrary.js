@@ -108,7 +108,7 @@
 
         setTimeout(() => {
             window.location.reload()
-        }, 300)
+        }, 3000)
     } else {
         while (!window.stash) {
             await new Promise((resolve) => setTimeout(resolve, 100))
