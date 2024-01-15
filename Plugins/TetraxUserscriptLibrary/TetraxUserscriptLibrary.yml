@@ -1,4 +1,5 @@
 name: Tetrax Userscript Library
+# requires: StashUserscriptLibrary
 description: Exports utility functions thats used in Tetrax's plugins
 version: 1.0
 ui:
