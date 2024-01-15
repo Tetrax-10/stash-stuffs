@@ -93,7 +93,7 @@ chokidar
                 await buildAndReload()
                 socket.send("reload")
             } catch (err) {
-                log("Hot Reload server connection lost!", "red")
+                log("Hot Reload client connection lost!", "red")
                 state.connected = false
                 state.reconnected = true
             }

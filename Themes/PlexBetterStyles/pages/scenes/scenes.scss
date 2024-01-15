@@ -15,12 +15,18 @@
     border-bottom: none;
 }
 
-// edit scene save button container
+// edit scene save button container (new scene page)
 #scene-edit-details .edit-buttons-container {
     background-color: rgba(0, 0, 0, 0.15);
     margin: unset;
     margin-bottom: 10px;
     border-radius: 5px;
+}
+// edit scene tab
+.tab-content {
+    #scene-edit-details .edit-buttons-container {
+        background: linear-gradient(to right, #353e3f, #464f4d);
+    }
 }
 
 // stash id left container

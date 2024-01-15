@@ -9,3 +9,11 @@
 .card.performer-card {
     padding: 0 0 0.5rem;
 }
+
+// remove background color when background image is not available
+.detail-header:not(:has(.background-image)) {
+    background-color: unset;
+}
+.detail-body nav {
+    border-bottom: none;
+}

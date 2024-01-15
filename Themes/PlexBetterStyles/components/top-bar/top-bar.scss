@@ -29,13 +29,13 @@
     .btn.active.minimal:not(.disabled) {
         border-radius: 10px;
         background-color: rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px) saturate(60%);
     }
 }
 
 // top bar container
 .top-nav.bg-dark {
-    background-color: rgba(0, 0, 0, 0.3) !important;
-    backdrop-filter: blur(10px) saturate(60%);
+    background-color: #333c3c !important;
 }
 
 // top bar (navbar)

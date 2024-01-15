@@ -49,8 +49,44 @@ code {
 #stash-table .bg-dark {
     background-color: rgba(0, 0, 0, 0.15) !important;
 }
+.scraper-table tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, 0.15);
+}
 
 // Settings page monospaced texts
 .setting-section .setting .value {
     color: #f7c600;
+}
+
+// package manager table heading
+.package-manager table thead {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+// package manager search plugin input
+.clearable-text-field,
+.clearable-text-field:active,
+.clearable-text-field:focus {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+    border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+#settings-container {
+    .btn-primary:not(:disabled):not(.disabled):not(.collapse-button).active,
+    .btn-primary:not(:disabled):not(.disabled):not(.collapse-button):active,
+    .btn-primary:not(:disabled):not(.disabled):not(.collapse-button):hover,
+    .btn-primary:not(:disabled):not(.disabled):not(.collapse-button):focus,
+    .btn-primary:not(:disabled):not(.disabled):not(.collapse-button) {
+        color: #000;
+        background-color: #d49c21;
+    }
+}
+
+#settings-container {
+    .btn-secondary {
+        color: #000;
+        background-color: #d49c21 !important;
+        font-weight: 500;
+        border: none;
+    }
 }

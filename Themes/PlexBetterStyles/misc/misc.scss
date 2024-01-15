@@ -87,7 +87,9 @@ div[class*="-divider"].d-none.d-xl-block:not(.scene-divider) {
 
 // all a tags
 a:hover,
-a {
+a,
+.btn-link:hover,
+.btn-link {
     color: #f7c600;
 }
 
@@ -128,4 +130,19 @@ input[type="range"].zoom-slider:focus::-ms-fill-lower {
 }
 input[type="range"].zoom-slider:focus::-ms-fill-upper {
     background: hsla(0, 0%, 100%, 0.2);
+}
+
+// filter badge
+.badge-info {
+    color: #000;
+    background-color: #d49c21;
+}
+
+// filtered info (Gender is Female)
+.tag-item {
+    background-color: rgba(0, 0, 0, 0.17) !important;
+    color: #eee !important;
+}
+.tag-item > button {
+    color: #fff !important;
 }
