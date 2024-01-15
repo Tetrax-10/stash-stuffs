@@ -10,7 +10,7 @@
 
 // settings section's bg color
 #settings-container .card {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.15) !important;
 }
 
 // settings page tabs
@@ -42,5 +42,15 @@ code {
 }
 
 #settings-menu-container a:hover {
+    color: #f7c600;
+}
+
+// Library tab alternative colored rows
+#stash-table .bg-dark {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+// Settings page monospaced texts
+.setting-section .setting .value {
     color: #f7c600;
 }
