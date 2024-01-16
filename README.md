@@ -14,13 +14,19 @@ Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?
 
 ## Plugins
 
-### 1. Play videos instead of previews
+### 1.Auto Select Updatable Plugins
+
+Auto selects updatable Plugins and Scrapers on Check for Updates
+
+![demo](./assets/AutoSelectUpdatablePlugins/demo.gif)
+
+### 2. Play videos instead of previews
 
 Play videos instead of previews when hovered over scene cards. This works on mobile too.
 
 ![demo](./assets/play-videos-instead-of-previews/demo.gif)
 
-### 2. Replace Thumbnails With High-Res Images
+### 3. Replace Thumbnails With High-Res Images
 
 Replaces thumbnails with original high res images in Galleries, Images and Performer tab.
 
