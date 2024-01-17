@@ -11,10 +11,9 @@
         "build-theme-local": "sass Themes/PlexBetterStyles/main.scss D:/Apps/Stash/custom.css --no-source-map --no-error-css",
         "build-personal-theme-local": "sass Themes/PlexBetterStyles/main-personal.scss D:/Apps/Stash/custom.css --no-source-map --no-error-css",
         "watch-plugin": "node Plugins/HotReload/ReloadServer.js --Plugins",
-        "build-plugin-local": "copyfiles Plugins/** D:/Apps/Stash/plugins"
+        "build-plugin-local": "xcopy \"Plugins\" \"D:\\Apps\\Stash\\plugins\\tetrax-repo\" /E /I /Y > nul"
     },
     "devDependencies": {
-        "copyfiles": "^2.4.1",
         "sass": "^1.69.7",
         "ws": "^8.16.0"
     }
