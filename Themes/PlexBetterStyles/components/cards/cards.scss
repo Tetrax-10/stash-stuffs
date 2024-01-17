@@ -39,6 +39,11 @@
         width: unset;
     }
 
+    // fix portrait previews height in cards
+    .scene-card-preview {
+        height: auto !important;
+    }
+
     // fix not portrait image card when on zoom 0
     .zoom-0 .image-card-preview:not(.portrait) {
         height: 180px;
@@ -50,4 +55,41 @@
 .card {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+// rating ribbon
+.rating-banner {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #eee;
+    top: -14px;
+    left: -58px;
+    padding-top: 40px;
+    transition: opacity 0.5s;
+}
+.card:hover .rating-banner {
+    opacity: 0;
+}
+
+// card hover animation
+.card {
+    &[class*="scene-"],
+    &[class*="image-"],
+    &[class*="gallery-"],
+    &[class*="performer-"],
+    &[class*="studio-"],
+    &[class*="tag-"],
+    &[class*="movie-"],
+    &[class*="scene-"] {
+        transition: transform 0.1s ease;
+
+        &:hover {
+            transform: scale(1.1);
+            z-index: 1;
+            background-color: #d49c21 !important;
+
+            .card-section * {
+                color: #000 !important;
+            }
+        }
+    }
 }

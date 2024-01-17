@@ -11,3 +11,8 @@
 .video-js:has(video[loop="loop"]) .vjs-big-button-group {
     display: none !important;
 }
+
+// big scene cards
+.scene-card.zoom-1 {
+    width: 350px;
+}

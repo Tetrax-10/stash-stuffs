@@ -144,11 +144,14 @@ input[type="range"].zoom-slider:focus::-ms-fill-upper {
 }
 
 // hide all scrollbar
-* {
+html,
+.tab-content,
+.scene-tabs {
     scrollbar-width: none !important;
-}
-::-webkit-scrollbar {
-    display: none !important;
+
+    &::-webkit-scrollbar {
+        display: none !important;
+    }
 }
 
 // star rating
