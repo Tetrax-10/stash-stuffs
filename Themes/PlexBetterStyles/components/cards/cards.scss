@@ -110,3 +110,17 @@
 .card hr {
     display: none;
 }
+
+// image card preview button
+.preview-button {
+    height: unset;
+    width: unset;
+    right: 0;
+    bottom: 0;
+}
+.preview-button .fa-icon {
+    color: #eee;
+    height: 2em;
+    transition: opacity 0.2s;
+    width: 2em;
+}
