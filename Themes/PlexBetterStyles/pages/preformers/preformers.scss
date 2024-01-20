@@ -17,3 +17,11 @@
 .detail-body nav {
     border-bottom: none;
 }
+
+// twitter
+.twitter {
+    &,
+    &:hover {
+        color: #1da1f2;
+    }
+}
