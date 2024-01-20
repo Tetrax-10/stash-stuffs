@@ -18,9 +18,9 @@ Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?
 
 Automatically updates Plugins and Scrappers on website (localhost:9999) startup.
 
-_**Note:** Updating plugins and scrapers will also replaces its config files with the newer version which means your settings for that plugin or scraper will be gone if you have configured it (eg: API keys). **Its not my fault its how Stash plugin manager updates its plugins and scrapers**. If you dont want to loose you settings then you can use my "Auto Select Updatable Plugins"._
+_**Note:** Updating plugins and scrapers will also replaces its config files with the newer version which means your settings for that plugin or scraper will be gone if you have configured it (eg: API keys). **Its not my fault its how Stash plugin manager updates its plugins and scrapers**. If you don't want to loose your settings then you can use my [Auto Select Updatable Plugins](https://github.com/Tetrax-10/stash-stuffs?tab=readme-ov-file#2-auto-select-updatable-plugins)._
 
-### 2. Auto Select Updatable Plugins
+### 2. Auto Select Updatable Plugins and Scrapers
 
 Auto selects updatable Plugins and Scrapers on Check for Updates
 
