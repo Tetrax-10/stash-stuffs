@@ -14,21 +14,21 @@ Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?
 
 ## Plugins
 
-### 1.Auto Select Updatable Plugins
+### 1. Auto Update Plugins and Scrapers
+
+Automatically updates Plugins and Scrappers on website (localhost:9999) startup.
+
+_**Note:** Updating plugins and scrapers will also replaces its config files with the newer version which means your settings for that plugin or scraper will be gone if you have configured it (eg: API keys). **Its not my fault its how Stash plugin manager updates its plugins and scrapers**. If you dont want to loose you settings then you can use my "Auto Select Updatable Plugins"._
+
+### 2. Auto Select Updatable Plugins
 
 Auto selects updatable Plugins and Scrapers on Check for Updates
 
 ![demo](./assets/AutoSelectUpdatablePlugins/demo.gif)
 
-### 2. Play videos instead of previews
-
-Play videos instead of previews when hovered over scene cards. This works on mobile too.
-
-![demo](./assets/play-videos-instead-of-previews/demo.gif)
-
 ### 3. Replace Thumbnails With High-Res Images
 
-Replaces thumbnails with original high res images in Galleries, Images and Performer tab.
+Replaces thumbnails with original high res images across entire webpage.
 
 You can see the difference in sharpness, details and colors.
 
@@ -46,6 +46,12 @@ You can see the difference in sharpness, details and colors.
     <td><img src="./assets/replace-thumbnails-with-images/closeup/original.jpg" style="width: 427px; height: auto;"></td>
   </tr>
 </table>
+
+### 4. Play videos instead of previews
+
+Play videos instead of previews when hovered over scene cards. This works on mobile too.
+
+![demo](./assets/play-videos-instead-of-previews/demo.gif)
 
 </br>
 
