@@ -1,6 +1,10 @@
 ;(() => {
     let socket
 
+    const state = {
+        connected: false,
+    }
+
     function log(text, color) {
         const colors = {
             blue: "#61AFEF",
@@ -15,21 +19,20 @@
         }
     }
 
-    socket = new WebSocket("ws://localhost:8082")
+    socket = new WebSocket(`ws://${window.location.hostname}:8082`)
 
     socket.onerror = () => {
-        log("Hot Reload server offline", "blue")
+        log("Reload Server offline", "blue")
     }
 
-    let isServerEstablished = false
-
     socket.addEventListener("open", () => {
-        isServerEstablished = true
+        state.connected = true
     })
 
     socket.addEventListener("close", () => {
-        if (isServerEstablished) {
-            log("Hot Reload server connection lost!", "red")
+        if (state.connected) {
+            log("Reload Client lost connection to the Reload Server!", "red")
+            state.connected = false
         }
     })
 
@@ -40,9 +43,6 @@
                 break
             case "connected":
                 log("Watching for changes...", "green")
-                break
-            case "reconnected":
-                log("Reconnected to Hot Reload server", "green")
                 break
         }
     }

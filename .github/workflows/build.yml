@@ -43,7 +43,7 @@ jobs:
             - name: Copy plugins
               run: |
                   cp -r Plugins dist/Plugins/
-                  rm -rf dist/Plugins/HotReload
+                  rm -rf dist/Plugins/ReloadClient
 
             - name: Copy build.sh
               run: cp -r .github/workflows/build.sh dist/
