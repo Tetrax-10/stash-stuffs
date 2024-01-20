@@ -9,9 +9,18 @@
     async function selectUpdatableItems() {
         await Utils.ui.waitForElement(".package-update-available .form-check > input", 10000)
 
-        const allUpdatableItems = document.querySelectorAll(".package-update-available .form-check > input")
-        allUpdatableItems.forEach((element) => {
+        const updatableItems = document.querySelectorAll(".package-update-available .form-check > input")
+        const tableBody = document.querySelector(".installed-packages tbody")
+        const updatableElements = []
+
+        updatableItems.forEach((element) => {
+            const tr = element.closest("tr")
+            updatableElements.push(tr)
             element.click()
+        })
+
+        updatableElements.reverse().forEach((updatableElement) => {
+            tableBody.insertBefore(updatableElement, tableBody.firstChild)
         })
     }
 
