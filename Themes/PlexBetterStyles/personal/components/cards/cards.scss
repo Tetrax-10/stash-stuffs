@@ -50,7 +50,13 @@
     margin: 5px 0;
 }
 
-// image cards inside a gallery
+// zoom-1 image cards inside a section in any page
 .zoom-1 .image-card-preview {
     height: 480px;
+}
+
+// zoom-1 gallery cards inside a section in any page
+.zoom-1.gallery-card .tag-card-image,
+.zoom-1.gallery-card .gallery-card-image {
+    max-height: 480px;
 }

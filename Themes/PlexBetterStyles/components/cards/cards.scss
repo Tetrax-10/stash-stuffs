@@ -48,6 +48,35 @@
     .zoom-0 .image-card-preview:not(.portrait) {
         height: 180px;
     }
+
+    // card hover animation
+    body:not(:has(.slick-track)) .card.grid-card {
+        &[class*="scene-"],
+        &[class*="image-"],
+        &[class*="gallery-"],
+        &[class*="performer-"],
+        &[class*="studio-"],
+        &[class*="tag-"],
+        &[class*="movie-"],
+        &[class*="scene-"] {
+            transition: transform 0.1s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 1;
+                background-color: #d49c21 !important;
+
+                .card-section * {
+                    color: #000 !important;
+                }
+            }
+        }
+    }
+
+    // hide rating ribbon on hover
+    .card:hover .rating-banner {
+        opacity: 0;
+    }
 }
 
 // cards background and border radius
@@ -55,6 +84,17 @@
 .card {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+// tagger page cards
+.StudioTagger-studio,
+// scene cards
+.search-item,
+.PerformerTagger-performer {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+.StudioTagger-studio .studio-card img {
+    background-color: unset !important;
 }
 
 // rating ribbon
@@ -66,30 +106,7 @@
     padding-top: 40px;
     transition: opacity 0.5s;
 }
-.card:hover .rating-banner {
-    opacity: 0;
-}
 
-// card hover animation
-.card {
-    &[class*="scene-"],
-    &[class*="image-"],
-    &[class*="gallery-"],
-    &[class*="performer-"],
-    &[class*="studio-"],
-    &[class*="tag-"],
-    &[class*="movie-"],
-    &[class*="scene-"] {
-        transition: transform 0.1s ease;
-
-        &:hover {
-            transform: scale(1.1);
-            z-index: 1;
-            background-color: #d49c21 !important;
-
-            .card-section * {
-                color: #000 !important;
-            }
-        }
-    }
+.card hr {
+    display: none;
 }
