@@ -3,32 +3,29 @@ name: Build and Publish Plugins and Themes
 on:
     push:
         paths:
+            - .github/**
             - Plugins/**
             - Themes/**
-            - .github/**
-    pull_request:
-        paths:
-            - Plugins/**
-            - Themes/**
-            - .github/**
-    workflow_dispatch:
+            - build.sh
+            - LICENSE
+            - README.md
 
 permissions:
     contents: write
-    pages: write
-    id-token: write
 
 jobs:
     build_and_publish:
-        name: Build plugins and themes
+        name: Build and Publish Plugins and Themes
         runs-on: ubuntu-latest
 
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: "0"
 
-            - name: Install Node.js
-              uses: actions/setup-node@v3
+            - name: Install node.js
+              uses: actions/setup-node@v4
               with:
                   node-version: 20.x
 
@@ -40,45 +37,22 @@ jobs:
                   npm run build-theme
                   cp -r Themes/PlexBetterStyles/PlexBetterStyles.yml dist/Themes/PlexBetterStyles/
 
-            - name: Copy plugins
+            - name: Move plugins
               run: cp -r Plugins dist/Plugins/
 
-            - name: Copy build.sh
-              run: cp -r .github/workflows/build.sh dist/
+            - name: Run build.sh
+              run: |
+                  chmod +x ./build.sh
+                  ./build.sh
+
+            - name: Move license and readme.md
+              run: cp -r README.md LICENSE dist/builds/
 
             - name: Publish to dist branch
               uses: s0/git-publish-subdir-action@develop
               env:
                   REPO: self
                   BRANCH: dist
-                  FOLDER: "dist"
+                  FOLDER: "dist/builds"
+                  MESSAGE: "built for {sha}"
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-    build:
-        name: Run build.sh
-        runs-on: ubuntu-latest
-        needs: build_and_publish
-        steps:
-            - name: Checkout dist
-              uses: actions/checkout@v3
-              with:
-                  path: dist
-                  ref: dist
-                  fetch-depth: "0"
-            # Run "git update-index --chmod=+x build.sh" and commit changes to grant elevated permissions so build.sh runs without any errors
-            - run: |
-                  cd dist
-                  ./build.sh ../_site/release
-            - uses: actions/upload-pages-artifact@v2
-
-    deploy:
-        name: Publish plugins and themes
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
-        runs-on: ubuntu-latest
-        needs: build
-        steps:
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v2

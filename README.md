@@ -10,7 +10,7 @@ Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?
 2. Source URL: `https://tetrax-10.github.io/stash-stuffs/release/index.yml`
 3. Local Path: `tetrax-repo`
 
-<img src="./assets/installation/add-repo.png" style="width: 400px; height: auto;">
+<img src="https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/installation/add-repo.png" style="width: 400px; height: auto;">
 
 ## Plugins
 
@@ -24,7 +24,7 @@ _**Note:** Updating plugins and scrapers will also replaces its config files wit
 
 Auto selects updatable Plugins and Scrapers when `Check for Updates` button is clicked
 
-![demo](./assets/AutoSelectUpdatablePlugins/demo.gif)
+![demo](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/AutoSelectUpdatablePlugins/demo.gif)
 
 ### 3. Replace Thumbnails With High-Res Images
 
@@ -38,12 +38,12 @@ You can see the difference in sharpness, details and colors.
      <td>Replaced Image by the plugin</td>
   </tr>
   <tr>
-    <td><img src="./assets/replace-thumbnails-with-images/thumbnail.jpeg" style="width: 427px; height: auto;"></td>
-    <td><img src="./assets/replace-thumbnails-with-images/original.jpg" style="width: 427px; height: auto;"></td>
+    <td><img src="https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/replace-thumbnails-with-images/thumbnail.jpeg" style="width: 427px; height: auto;"></td>
+    <td><img src="https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/replace-thumbnails-with-images/original.jpg" style="width: 427px; height: auto;"></td>
   </tr>
   <tr>
-    <td><img src="./assets/replace-thumbnails-with-images/closeup/thumbnail.jpeg" style="width: 427px; height: auto;"></td>
-    <td><img src="./assets/replace-thumbnails-with-images/closeup/original.jpg" style="width: 427px; height: auto;"></td>
+    <td><img src="https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/replace-thumbnails-with-images/closeup/thumbnail.jpeg" style="width: 427px; height: auto;"></td>
+    <td><img src="https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/replace-thumbnails-with-images/closeup/original.jpg" style="width: 427px; height: auto;"></td>
   </tr>
 </table>
 
@@ -51,7 +51,7 @@ You can see the difference in sharpness, details and colors.
 
 Play videos instead of previews when hovered over scene cards. This works on mobile too.
 
-![demo](./assets/play-videos-instead-of-previews/demo.gif)
+![demo](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/play-videos-instead-of-previews/demo.gif)
 
 </br>
 
@@ -69,28 +69,28 @@ A modified version of [Stash-Plex theme](https://docs.stashapp.cc/user-interface
 
 ### Galleries
 
-![galleries](./assets/plex-better-styles/galleries.png)
+![galleries](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/galleries.png)
 
 ### Performers
 
-![performers](./assets/plex-better-styles/performers.png)
+![performers](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/performers.png)
 
 ### Images
 
-![images](./assets/plex-better-styles/images.png)
+![images](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/images.png)
 
 ### Scenes
 
-![scenes](./assets/plex-better-styles/scenes.png)
+![scenes](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/scenes.png)
 
 ### Settings
 
-![settings](./assets/plex-better-styles/settings.png)
+![settings](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/settings.png)
 
 ### Help
 
-![help](./assets/plex-better-styles/help.png)
+![help](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/help.png)
 
 ### Tags
 
-![tags](./assets/plex-better-styles/tags.png)
+![tags](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/plex-better-styles/tags.png)
