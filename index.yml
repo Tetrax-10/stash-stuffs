@@ -5,7 +5,7 @@
   version: 1.0-bcae8e2
   date: 2024-01-15 13:48:03
   path: PlayVideosInsteadOfPreviews.zip
-  sha256: dad40e67579e1d05f20f2f8ab924ed0231c0e9e18b543fa23cb5bb61db5d6a4b
+  sha256: a8ca7ee22ca03b78811ffc89ab13f91bc865c70bf12db4080a855811def39314
   requires:
     - TetraxUserscriptLibrary
 
@@ -16,7 +16,7 @@
   version: 1.0-41aa64d
   date: 2024-01-15 10:38:28
   path: TetraxUserscriptLibrary.zip
-  sha256: 04d7451c044be82677ef0368523b23249653c3ed3ff862217a525e2dca62a4be
+  sha256: e207d760e335bc27663f4746952fec75c5491a7ba61a4808dee3890f307f4b83
 
 - id: ReplaceThumbnailsWithImages
   name: Replace Thumbnails With High-Res Images
@@ -25,7 +25,7 @@
   version: 1.0-4ff3a3b
   date: 2024-01-15 08:43:20
   path: ReplaceThumbnailsWithImages.zip
-  sha256: 0c872ea846e40ae475dc8f9e253aa5c3ccd95bee145e8bf53d2963407af35969
+  sha256: 8f7cc06e27f7b3c35b8dc5de03409e5a949b3b5d0044b2bb604277bf87b0469f
   requires:
     - TetraxUserscriptLibrary
 
@@ -36,7 +36,7 @@
   version: 1.0-ee95ce0
   date: 2024-01-17 18:37:26
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: 8104d0f90844408bfd4031949b6c984da185ec72e24bd79bac409024384c76d0
+  sha256: 8fbc94d2a8fab2faf385816036f8d34051a777568a3fb303c48dbee4e765a87a
   requires:
     - TetraxUserscriptLibrary
 
@@ -47,7 +47,7 @@
   version: 1.0-5b74cc4
   date: 2024-01-20 18:25:09
   path: AutoSelectUpdatablePlugins.zip
-  sha256: dfd2a51be92d5759640712324211cc7da9782e208adbab91bad6af81316c33b2
+  sha256: 4c306f6f1eccf37fc8b22a6bbd10a250a3f17088d159f30e9dd5270feddd08db
   requires:
     - TetraxUserscriptLibrary
 
@@ -58,5 +58,5 @@
   version: 1.0-9b9d226
   date: 2024-01-20 17:21:08
   path: PlexBetterStyles.zip
-  sha256: b42931f20b5892cda9b506d4eaabd2e213ceed51f7ca02fdd40795725d07de24
+  sha256: 805476942be0a2f4e045788f5d263e2168d8d7d3b7b4ec84b93406782f3722cd
 
