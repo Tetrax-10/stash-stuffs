@@ -1,4 +1,5 @@
 name: Reload Client
+#pkgignore
 description: Client side code for auto-reloading when the source code changes
 version: 1.0
 ui:

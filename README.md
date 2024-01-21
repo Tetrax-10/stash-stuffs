@@ -22,7 +22,7 @@ _**Note:** Updating plugins and scrapers will also replaces its config files wit
 
 ### 2. Auto Select Updatable Plugins and Scrapers
 
-Auto selects updatable Plugins and Scrapers on Check for Updates
+Auto selects updatable Plugins and Scrapers when `Check for Updates` button is clicked
 
 ![demo](./assets/AutoSelectUpdatablePlugins/demo.gif)
 

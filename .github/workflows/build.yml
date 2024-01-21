@@ -41,9 +41,7 @@ jobs:
                   cp -r Themes/PlexBetterStyles/PlexBetterStyles.yml dist/Themes/PlexBetterStyles/
 
             - name: Copy plugins
-              run: |
-                  cp -r Plugins dist/Plugins/
-                  rm -rf dist/Plugins/ReloadClient
+              run: cp -r Plugins dist/Plugins/
 
             - name: Copy build.sh
               run: cp -r .github/workflows/build.sh dist/
