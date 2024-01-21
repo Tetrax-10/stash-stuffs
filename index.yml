@@ -1,0 +1,62 @@
+- id: PlayVideosInsteadOfPreviews
+  name: Play Videos Instead of Previews
+  metadata:
+    description: Plays videos instead of previews in scene cards
+  version: 1.0-bcae8e2
+  date: 2024-01-15 13:48:03
+  path: PlayVideosInsteadOfPreviews.zip
+  sha256: dad40e67579e1d05f20f2f8ab924ed0231c0e9e18b543fa23cb5bb61db5d6a4b
+  requires:
+    - TetraxUserscriptLibrary
+
+- id: TetraxUserscriptLibrary
+  name: Tetrax Userscript Library
+  metadata:
+    description: Exports utility functions thats used in Tetrax's plugins
+  version: 1.0-41aa64d
+  date: 2024-01-15 10:38:28
+  path: TetraxUserscriptLibrary.zip
+  sha256: 04d7451c044be82677ef0368523b23249653c3ed3ff862217a525e2dca62a4be
+
+- id: ReplaceThumbnailsWithImages
+  name: Replace Thumbnails With High-Res Images
+  metadata:
+    description: Replaces thumbnails with original high res images
+  version: 1.0-4ff3a3b
+  date: 2024-01-15 08:43:20
+  path: ReplaceThumbnailsWithImages.zip
+  sha256: 0c872ea846e40ae475dc8f9e253aa5c3ccd95bee145e8bf53d2963407af35969
+  requires:
+    - TetraxUserscriptLibrary
+
+- id: AutoUpdatePluginsAndScrapers
+  name: Auto Update Plugins and Scrapers
+  metadata:
+    description: Automatically updates Plugins and Scrappers on website Startup
+  version: 1.0-ee95ce0
+  date: 2024-01-17 18:37:26
+  path: AutoUpdatePluginsAndScrapers.zip
+  sha256: 8104d0f90844408bfd4031949b6c984da185ec72e24bd79bac409024384c76d0
+  requires:
+    - TetraxUserscriptLibrary
+
+- id: AutoSelectUpdatablePlugins
+  name: Auto Select Updatable Plugins
+  metadata:
+    description: Auto selects updatable Plugins and Scrapers on Check for Updates
+  version: 1.0-5b74cc4
+  date: 2024-01-20 18:25:09
+  path: AutoSelectUpdatablePlugins.zip
+  sha256: dfd2a51be92d5759640712324211cc7da9782e208adbab91bad6af81316c33b2
+  requires:
+    - TetraxUserscriptLibrary
+
+- id: PlexBetterStyles
+  name: Theme - Plex Better Styles
+  metadata:
+    description: A modified version of Stash-Plex theme
+  version: 1.0-9b9d226
+  date: 2024-01-20 17:21:08
+  path: PlexBetterStyles.zip
+  sha256: b42931f20b5892cda9b506d4eaabd2e213ceed51f7ca02fdd40795725d07de24
+
