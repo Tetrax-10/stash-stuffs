@@ -1,4 +1,11 @@
 // hide info bar
-.filter-container.text-muted.paginationIndex.center-text {
+.filter-container.text-muted.paginationIndex.center-text:has(+.filter-container.pagination),
+.filter-container.pagination + .filter-container.text-muted.paginationIndex.center-text {
     display: none;
+}
+// invisible info bar when there is no page nav bar
+.filter-container.text-muted.paginationIndex.center-text {
+    display: flex;
+    visibility: hidden;
+    margin-bottom: 5px;
 }
