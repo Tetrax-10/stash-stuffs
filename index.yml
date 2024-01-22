@@ -2,10 +2,21 @@
   name: Play Videos Instead of Previews
   metadata:
     description: Plays videos instead of previews in scene cards
-  version: 1.0-bcae8e2
-  date: 2024-01-15 13:48:03
+  version: 1.0-f25192c
+  date: 2024-01-22 18:55:33
   path: PlayVideosInsteadOfPreviews.zip
-  sha256: a8ca7ee22ca03b78811ffc89ab13f91bc865c70bf12db4080a855811def39314
+  sha256: 667441d7ce51c9ca27373f85c4e92d7b16ef197ec3c485d247dea19fa98f892d
+  requires:
+    - TetraxUserscriptLibrary
+
+- id: AutoSelectUpdatablePluginsAndScrapers
+  name: Auto Select Updatable Plugins and Scrapers
+  metadata:
+    description: Auto selects updatable Plugins and Scrapers when Check for Updates is clicked
+  version: 1.0-f25192c
+  date: 2024-01-22 18:55:33
+  path: AutoSelectUpdatablePluginsAndScrapers.zip
+  sha256: 9c0a547e8ffd924ce03b4f481a0ca472d334731217d61921cdd09f2b43aa39fb
   requires:
     - TetraxUserscriptLibrary
 
@@ -13,19 +24,19 @@
   name: Tetrax Userscript Library
   metadata:
     description: Exports utility functions thats used in Tetrax's plugins
-  version: 1.0-41aa64d
-  date: 2024-01-15 10:38:28
+  version: 1.0-f25192c
+  date: 2024-01-22 18:55:33
   path: TetraxUserscriptLibrary.zip
-  sha256: e207d760e335bc27663f4746952fec75c5491a7ba61a4808dee3890f307f4b83
+  sha256: d694083083758ea460f851f2eb49a6c0ac309ce8f74da721e9e2cad8318deb60
 
 - id: ReplaceThumbnailsWithImages
   name: Replace Thumbnails With High-Res Images
   metadata:
     description: Replaces thumbnails with original high res images
-  version: 1.0-4ff3a3b
-  date: 2024-01-15 08:43:20
+  version: 1.0-f25192c
+  date: 2024-01-22 18:55:33
   path: ReplaceThumbnailsWithImages.zip
-  sha256: 8f7cc06e27f7b3c35b8dc5de03409e5a949b3b5d0044b2bb604277bf87b0469f
+  sha256: 21a381e4f501a0366facddc157e3025188317aaea4aaaabaf6e34510be62638a
   requires:
     - TetraxUserscriptLibrary
 
@@ -36,18 +47,7 @@
   version: 1.0-ee95ce0
   date: 2024-01-17 18:37:26
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: 8fbc94d2a8fab2faf385816036f8d34051a777568a3fb303c48dbee4e765a87a
-  requires:
-    - TetraxUserscriptLibrary
-
-- id: AutoSelectUpdatablePlugins
-  name: Auto Select Updatable Plugins
-  metadata:
-    description: Auto selects updatable Plugins and Scrapers on Check for Updates
-  version: 1.0-5b74cc4
-  date: 2024-01-20 18:25:09
-  path: AutoSelectUpdatablePlugins.zip
-  sha256: 4c306f6f1eccf37fc8b22a6bbd10a250a3f17088d159f30e9dd5270feddd08db
+  sha256: fcbf7a9b8fb25e088d0b8b655f5250ae9637de11b2be3a289762e943c146cbe4
   requires:
     - TetraxUserscriptLibrary
 
@@ -55,8 +55,8 @@
   name: Theme - Plex Better Styles
   metadata:
     description: A modified version of Stash-Plex theme
-  version: 1.0-9b9d226
-  date: 2024-01-20 17:21:08
+  version: 1.0-9159c52
+  date: 2024-01-22 18:52:17
   path: PlexBetterStyles.zip
-  sha256: 805476942be0a2f4e045788f5d263e2168d8d7d3b7b4ec84b93406782f3722cd
+  sha256: e82b1253a97cb2e0c769f7bf4aab2deb0925f6c6bae18629228f327397cd90cc
 
