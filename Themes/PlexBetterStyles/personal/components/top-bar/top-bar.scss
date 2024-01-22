@@ -1,3 +1,8 @@
+// hide stash home button
+.navbar-brand {
+    display: none;
+}
+
 // hide donation button
 .btn-primary.btn.donate.minimal {
     display: none;
