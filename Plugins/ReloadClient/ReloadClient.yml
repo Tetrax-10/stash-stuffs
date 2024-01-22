@@ -1,6 +1,7 @@
 name: Reload Client
 #pkgignore
 description: Client side code for auto-reloading when the source code changes
+url: https://github.com/Tetrax-10/stash-stuffs
 version: 1.0
 ui:
     javascript:

@@ -1,0 +1,10 @@
+name: Auto Select Updatable Plugins and Scrapers
+# requires: TetraxUserscriptLibrary
+description: Auto selects updatable Plugins and Scrapers when Check for Updates is clicked
+url: https://github.com/Tetrax-10/stash-stuffs
+version: 1.0
+ui:
+    requires:
+        - TetraxUserscriptLibrary
+    javascript:
+        - AutoSelectUpdatablePluginsAndScrapers.js

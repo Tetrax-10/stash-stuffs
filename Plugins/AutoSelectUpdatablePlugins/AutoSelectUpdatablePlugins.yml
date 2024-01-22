@@ -1,9 +1,0 @@
-name: Auto Select Updatable Plugins
-# requires: TetraxUserscriptLibrary
-description: Auto selects updatable Plugins and Scrapers on Check for Updates
-version: 1.0
-ui:
-    requires:
-        - TetraxUserscriptLibrary
-    javascript:
-        - AutoSelectUpdatablePlugins.js

@@ -4,10 +4,9 @@
     }
 
     const Stash = window.TetraxUSL.stash
-    const Utils = window.TetraxUSL.utils
 
     async function replaceThumbnailsWithImages(timeOut, className) {
-        await Utils.ui.waitForElement(className, timeOut)
+        await Stash.waitForElement(className, timeOut, document.body, true)
 
         const allThumbnailElement = document.querySelectorAll(className)
         allThumbnailElement.forEach((element) => {
@@ -15,27 +14,27 @@
         })
     }
 
-    /////////////////////////////// Main ///////////////////////////////
+    Stash.addPageListener({
+        event: "tetrax:page:any:images:grid",
+        regex: /\/[^\/]+\/\d+\/images(?!.*disp=)/,
+    })
+    Stash.addPageListener({
+        event: "tetrax:page:any:galleries:grid",
+        regex: /\/[^\/]+\/\d+\/galleries(?!.*disp=)/,
+    })
+    Stash.addPageListener({
+        // disp=1
+        event: "tetrax:page:any:galleries:list",
+        regex: /\/[^\/]+\/\d+\/galleries.*disp=1/,
+    })
 
-    if (await Utils.ui.waitForElement(".main > div", 5000)) {
-        let previousUrl = window.location.href
-        setInterval(() => {
-            if (!document.querySelector(".main > div[replaceThumbnailsWithImages]") || window.location.href !== previousUrl) {
-                document.querySelector(".main > div").setAttribute("replaceThumbnailsWithImages", "")
-                previousUrl = window.location.href
-
-                if (
-                    Stash.matchUrl(window.location, /\/images\?/) ||
-                    Stash.matchUrl(window.location, /\/galleries\/\d+\?/) ||
-                    Stash.matchUrl(window.location, /\/galleries\/\d+\/add/) ||
-                    Stash.matchUrl(window.location, /\/performers\/\d+\/images/) ||
-                    Stash.matchUrl(window.location, /\/$/)
-                ) {
-                    replaceThumbnailsWithImages(5000, ".image-card-preview-image")
-                } else if (Stash.matchUrl(window.location, /\/galleries\?/) || Stash.matchUrl(window.location, /\/performers\/\d+\/galleries/) || Stash.matchUrl(window.location, /\/$/)) {
-                    replaceThumbnailsWithImages(5000, ".gallery-card-image")
-                }
-            }
-        }, 100)
-    }
+    Stash.addEventListeners(["stash:page:images", "stash:page:gallery", "stash:page:gallery:add", "stash:page:home", "tetrax:page:any:images:grid"], (e) => {
+        replaceThumbnailsWithImages(5000, ".image-card-preview-image")
+    })
+    Stash.addEventListeners(["stash:page:galleries", "stash:page:home", "tetrax:page:any:galleries:grid"], () => {
+        replaceThumbnailsWithImages(5000, ".gallery-card-image")
+    })
+    Stash.addEventListeners(["stash:page:galleries:list", "tetrax:page:any:galleries:list"], () => {
+        replaceThumbnailsWithImages(5000, ".w-100.w-sm-auto")
+    })
 })()

@@ -55,43 +55,8 @@
             }
         }
 
-        async function waitForElement(selector, timeout = null, location = document.body) {
-            return new Promise((resolve) => {
-                if (document.querySelector(selector)) {
-                    return resolve(document.querySelector(selector))
-                }
-
-                const observer = new MutationObserver(async () => {
-                    if (document.querySelector(selector)) {
-                        resolve(document.querySelector(selector))
-                        observer.disconnect()
-                    } else {
-                        if (timeout) {
-                            async function timeOver() {
-                                return new Promise((resolve) => {
-                                    setTimeout(() => {
-                                        observer.disconnect()
-                                        resolve(false)
-                                    }, timeout)
-                                })
-                            }
-                            resolve(await timeOver())
-                        }
-                    }
-                })
-
-                observer.observe(location, {
-                    childList: true,
-                    subtree: true,
-                })
-            })
-        }
-
         return {
             utils: {
-                ui: {
-                    waitForElement: waitForElement,
-                },
                 plugins: {
                     getInstalled: getInstalledPlugins,
                     isInstalled: isPluginInstalled,
@@ -101,9 +66,9 @@
         }
     })()
 
-    const isStashUserscriptLibrary = await LocalTetraxUSL.utils.plugins.isInstalled("StashUserscriptLibrary")
+    const isStashUSLInstalled = await LocalTetraxUSL.utils.plugins.isInstalled("StashUserscriptLibrary")
 
-    if (!isStashUserscriptLibrary) {
+    if (!isStashUSLInstalled) {
         await LocalTetraxUSL.utils.plugins.install("StashUserscriptLibrary")
 
         setTimeout(() => {
@@ -115,6 +80,6 @@
         }
 
         window.TetraxUSL = LocalTetraxUSL
-        window.TetraxUSL.stash = window.stash
+        window.TetraxUSL.stash = new Stash({ detectReRenders: true })
     }
 })()
