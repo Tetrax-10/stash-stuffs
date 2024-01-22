@@ -7,7 +7,7 @@
 Go to [Settings => Plugins => Available Plugins](http://localhost:9999/settings?tab=plugins) and click `Add Source`, And fill the popup with these values:
 
 1. Name: `Tetrax Repo`
-2. Source URL: `https://tetrax-10.github.io/stash-stuffs/index.yml`
+2. Source URL: [`https://tetrax-10.github.io/stash-stuffs/index.yml`](https://tetrax-10.github.io/stash-stuffs/index.yml)
 3. Local Path: `tetrax-repo`
 
 <img src="https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/installation/add-repo.png" style="width: 400px; height: auto;">
