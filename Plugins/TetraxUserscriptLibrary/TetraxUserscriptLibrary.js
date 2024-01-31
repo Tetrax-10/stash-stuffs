@@ -80,6 +80,6 @@
         }
 
         window.TetraxUSL = LocalTetraxUSL
-        window.TetraxUSL.stash = new Stash({ detectReRenders: true })
+        window.TetraxUSL.stash = window.stash
     }
 })()

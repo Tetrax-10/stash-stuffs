@@ -14,12 +14,7 @@
         })
     }
 
-    Stash.addPageListener({
-        event: "tetrax:page:any:scenes:grid",
-        regex: /\/[^\/]+\/\d+\?(?!.*disp=)/,
-    })
-
-    Stash.addEventListeners(["stash:page:scenes", "tetrax:page:any:scenes:grid"], (e) => {
+    Stash.addEventListeners(["stash:page:scenes", "stash:page:any:scenes:grid"], () => {
         injectVideosAsPreview(5000)
     })
 })()
