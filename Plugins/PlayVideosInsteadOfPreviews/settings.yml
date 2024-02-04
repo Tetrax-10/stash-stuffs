@@ -1,10 +1,9 @@
+id: PlayVideosInsteadOfPreviews
 name: Play Videos Instead of Previews
-# requires: TetraxUserscriptLibrary
 description: Plays videos instead of previews in scene cards
 url: https://github.com/Tetrax-10/stash-stuffs
 version: 1.0
 ui:
+    javascript: PlayVideosInsteadOfPreviews.js
     requires:
         - TetraxUserscriptLibrary
-    javascript:
-        - PlayVideosInsteadOfPreviews.js

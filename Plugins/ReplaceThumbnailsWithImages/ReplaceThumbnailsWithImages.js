@@ -1,4 +1,4 @@
-;(async () => {
+export default async () => {
     while (!window.TetraxUSL?.stash) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
@@ -23,4 +23,4 @@
     Stash.addEventListeners(["stash:page:galleries:list", "stash:page:any:galleries:list"], () => {
         replaceThumbnailsWithImages(5000, ".w-100.w-sm-auto")
     })
-})()
+}

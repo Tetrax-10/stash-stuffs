@@ -3,12 +3,10 @@ name: Build and Publish Plugins and Themes
 on:
     push:
         paths:
-            - .github/**
+            - .github/workflows/**
             - Plugins/**
             - Themes/**
-            - build.sh
-            - LICENSE
-            - README.md
+            - build.js
 
 permissions:
     contents: write
@@ -32,27 +30,14 @@ jobs:
             - name: Install repository dependencies
               run: npm ci
 
-            - name: Build themes
-              run: |
-                  npm run build-theme
-                  cp -r Themes/PlexBetterStyles/PlexBetterStyles.yml dist/Themes/PlexBetterStyles/
-
-            - name: Move plugins
-              run: cp -r Plugins dist/Plugins/
-
-            - name: Run build.sh
-              run: |
-                  chmod +x ./build.sh
-                  ./build.sh
-
-            - name: Move license and readme.md
-              run: cp -r README.md LICENSE dist/builds/
+            - name: Build plugins and themes
+              run: node build.js
 
             - name: Publish to dist branch
               uses: s0/git-publish-subdir-action@develop
               env:
                   REPO: self
                   BRANCH: dist
-                  FOLDER: "dist/builds"
+                  FOLDER: "dist"
                   MESSAGE: "built for {sha}"
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

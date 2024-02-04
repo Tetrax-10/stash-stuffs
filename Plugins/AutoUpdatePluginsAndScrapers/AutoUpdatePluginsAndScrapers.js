@@ -1,4 +1,4 @@
-;(async () => {
+export default async () => {
     while (!window.TetraxUSL?.stash) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
@@ -126,4 +126,4 @@
 
     const updateableScrapers = await getUpdateableScrapers()
     if (updateableScrapers.length) await updateScrapers(updateableScrapers)
-})()
+}

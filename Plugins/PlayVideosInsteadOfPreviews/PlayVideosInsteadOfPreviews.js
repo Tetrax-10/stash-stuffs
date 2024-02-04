@@ -1,4 +1,4 @@
-;(async () => {
+export default async () => {
     while (!window.TetraxUSL?.stash) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
@@ -17,4 +17,4 @@
     Stash.addEventListeners(["stash:page:scenes", "stash:page:any:scenes:grid"], () => {
         injectVideosAsPreview(5000)
     })
-})()
+}

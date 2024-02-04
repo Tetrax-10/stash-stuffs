@@ -1,4 +1,4 @@
-;(async function installStashUserscriptLibrary() {
+export default async () => {
     const LocalTetraxUSL = (() => {
         async function callGQL(reqData) {
             const options = {
@@ -82,4 +82,4 @@
         window.TetraxUSL = LocalTetraxUSL
         window.TetraxUSL.stash = window.stash
     }
-})()
+}

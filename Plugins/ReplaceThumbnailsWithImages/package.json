@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "scripts": {
+        "watch": "stash-plugin-builder --watch",
+        "build": "stash-plugin-builder"
+    }
+}

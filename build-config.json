@@ -1,0 +1,5 @@
+{
+    "plugins": ["Plugins/*", "Themes/*"],
+    "outDir": "dist",
+    "include": ["README.md", "LICENSE"]
+}
