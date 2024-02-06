@@ -1,9 +1,27 @@
 import fs from "fs"
 import path from "path"
+import parseArgs from "minimist"
 import { execSync } from "child_process"
 import { parse as parseYml, stringify as stringifyYml } from "yaml"
+import "dotenv/config"
 
 import config from "./build-config.json" assert { type: "json" }
+
+const argv = parseArgs(process.argv.slice(2))
+const isWin = process.platform === "win32"
+config.outDir = config.outDir ?? "dist"
+
+function getArgv(key, shortKey) {
+    return argv[key] || (shortKey ? argv[shortKey] : argv[key[0]])
+}
+
+config.mode = {}
+config.mode.build = getArgv("build")
+config.mode.dist = getArgv("dist")
+
+if (config.mode.build) {
+    config.outDir = process.env.STASH_PLUGIN_DIR
+}
 
 class GlobModules {
     getFileContents(filePath) {
@@ -60,6 +78,21 @@ class GlobModules {
             .map((file) => path.join(dirPath, file))
     }
 
+    getPluginYmlPath(_path) {
+        const ymls = Glob.getYmlFiles(_path)
+        return ymls.length > 1
+            ? (() => {
+                  const id = path.basename(_path)
+                  const yml = path.join(_path, `${id}.yml`)
+                  if (Glob.fsExsists(yml)) {
+                      return yml
+                  } else {
+                      return ymls[0]
+                  }
+              })()
+            : ymls[0]
+    }
+
     getYml(filePath) {
         if (!this.fsExsists(filePath)) return null
         try {
@@ -106,12 +139,12 @@ class UtilsModules {
                 pluginPaths.stashPluginBuilderPluginPaths.push(...recursivePluginPaths.stashPluginBuilderPluginPaths)
             } else if (Glob.fsExsists(_path)) {
                 const isSettingsYmlPresent = Glob.fsExsists(path.join(_path, "settings.yml"))
-                const isSettingsYmlIdPresent = isSettingsYmlPresent ? Glob.getYml(path.join(_path, "settings.yml"))?.id : false
+                const settingsYmlId = isSettingsYmlPresent ? Glob.getYml(path.join(_path, "settings.yml"))?.id : false
 
-                if (isSettingsYmlIdPresent) {
+                if (settingsYmlId) {
                     pluginPaths.stashPluginBuilderPluginPaths.push({
                         pluginPath: _path,
-                        pluginDistPath: path.join(config.outDir, path.basename(_path)),
+                        pluginDistPath: path.join(config.outDir, settingsYmlId),
                     })
                 } else {
                     pluginPaths.normalPluginPaths.push({
@@ -126,21 +159,14 @@ class UtilsModules {
     }
 
     packPlugin(pluginPath, pluginDistPath) {
-        const ymls = Glob.getYmlFiles(pluginDistPath)
-        if (ymls.length) {
-            const pluginYmlPath =
-                ymls.length > 1
-                    ? (() => {
-                          const id = path.basename(pluginDistPath)
-                          const yml = path.join(pluginDistPath, `${id}.yml`)
-                          if (Glob.fsExsists(yml)) {
-                              return yml
-                          } else {
-                              return ymls[0]
-                          }
-                      })()
-                    : ymls[0]
+        if (path.resolve(config.outDir) === path.resolve(pluginDistPath)) {
+            pluginDistPath = Glob.getChildDirs(pluginDistPath, true)?.[0]
+        }
 
+        const ymls = Glob.getYmlFiles(pluginDistPath)
+
+        if (ymls.length) {
+            const pluginYmlPath = Glob.getPluginYmlPath(pluginDistPath)
             const pluginYmlData = Glob.getYml(pluginYmlPath)
             const pluginRawYml = Glob.getFileContents(pluginYmlPath)
             const indexYmlChunk = {}
@@ -188,12 +214,8 @@ class UtilsModules {
 
 class ShellModules {
     run(command) {
-        try {
-            const stdout = execSync(command)
-            return stdout.toString().trim()
-        } catch (error) {
-            throw error
-        }
+        const stdout = execSync(command)
+        return stdout.toString().trim()
     }
 }
 
@@ -207,19 +229,19 @@ const allPluginFolders = Utils.getAllPluginFolders(config.plugins ?? ["./"])
 const indexYml = []
 
 if (config.excludePluginFolders?.length) {
-    allPluginFolders.normalPluginPaths = allPluginFolders.normalPluginPaths.filter(({ pluginDistPath }) => !config.excludePluginFolders.includes(path.basename(pluginDistPath)))
-    allPluginFolders.stashPluginBuilderPluginPaths = allPluginFolders.stashPluginBuilderPluginPaths.filter(({ pluginDistPath }) => !config.excludePluginFolders.includes(path.basename(pluginDistPath)))
+    allPluginFolders.normalPluginPaths = allPluginFolders.normalPluginPaths.filter(({ pluginPath }) => !config.excludePluginFolders.includes(path.basename(pluginPath)))
+    allPluginFolders.stashPluginBuilderPluginPaths = allPluginFolders.stashPluginBuilderPluginPaths.filter(({ pluginPath }) => !config.excludePluginFolders.includes(path.basename(pluginPath)))
 }
 
 allPluginFolders.normalPluginPaths.forEach(({ pluginPath, pluginDistPath }) => {
     Glob.copy(pluginPath, config.outDir)
-    indexYml.push(Utils.packPlugin(pluginPath, pluginDistPath))
+    if (!isWin && config.mode.dist) indexYml.push(Utils.packPlugin(pluginPath, pluginDistPath)) // works only on linux
 })
 allPluginFolders.stashPluginBuilderPluginPaths.forEach(({ pluginPath, pluginDistPath }) => {
-    Shell.run(`npx stash-plugin-builder --in=${pluginPath} --out=${config.outDir} --minify`)
-    indexYml.push(Utils.packPlugin(pluginPath, pluginDistPath))
+    Shell.run(`npx stash-plugin-builder --in=${pluginPath} --out=${config.outDir}${config.mode.dist ? " --minify" : ""}`)
+    if (!isWin && config.mode.dist) indexYml.push(Utils.packPlugin(pluginPath, pluginDistPath)) // works only on linux
 })
 
-Glob.writeYml(path.join(config.outDir, "index.yml"), indexYml)
+if (indexYml.length && !isWin && config.mode.dist) Glob.writeYml(path.join(config.outDir, "index.yml"), indexYml)
 
-if (config.include?.length) Utils.copyExternalFiles(config.include, config.outDir)
+if (config.include?.length && config.mode.dist) Utils.copyExternalFiles(config.include, config.outDir)

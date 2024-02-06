@@ -31,7 +31,7 @@ jobs:
               run: npm ci
 
             - name: Build plugins and themes
-              run: node build.js
+              run: npm run build-dist
 
             - name: Publish to dist branch
               uses: s0/git-publish-subdir-action@develop

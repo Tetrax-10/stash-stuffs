@@ -4,6 +4,12 @@
     "author": "Tetrax-10",
     "license": "MIT",
     "type": "module",
+    "scripts": {
+        "build": "stash-plugin-builder",
+        "watch": "stash-plugin-builder --watch",
+        "build-all": "node build.js --build",
+        "build-dist": "node build.js --dist"
+    },
     "devDependencies": {
         "stash-plugin-builder": "^0.0.12-alpha"
     }
