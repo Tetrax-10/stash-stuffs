@@ -6,7 +6,7 @@
   version: 1.0-e2e174e
   date: 2024-02-04 22:13:05
   path: AutoSelectUpdatablePluginsAndScrapers.zip
-  sha256: 3762b7b76fa2f8df15f9098e18e17ea50bc8cf10d305f7d4f1fca30245bea49f
+  sha256: 23b4d710a8cdf791b87eb954d22a5b351a4ba75010bc77bdcb5e305a3f5ca08f
   requires:
     - TetraxUserscriptLibrary
 - id: AutoUpdatePluginsAndScrapers
@@ -16,7 +16,7 @@
   version: 1.0-e2e174e
   date: 2024-02-04 22:13:05
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: 02684ef4e59d0280f93004b10d31f2e2de5d238d433470ead9f75ced28f560d2
+  sha256: b45c657917cbe54d99a6d5cd1003dfb5d67798bda4128e725994102a43e9e27a
   requires:
     - TetraxUserscriptLibrary
 - id: PlayVideosInsteadOfPreviews
@@ -26,7 +26,7 @@
   version: 1.0-e2e174e
   date: 2024-02-04 22:13:05
   path: PlayVideosInsteadOfPreviews.zip
-  sha256: 70318a6c02ac39ba597572169f8194ec5aa226e995f56ce2c5119305965db4ae
+  sha256: 7e9ddd21d53d30893c7fdacc0aaaf1fcbd03cb97acd9dcb5bde2bf0304e64283
   requires:
     - TetraxUserscriptLibrary
 - id: ReplaceThumbnailsWithImages
@@ -36,7 +36,7 @@
   version: 1.0-e2e174e
   date: 2024-02-04 22:13:05
   path: ReplaceThumbnailsWithImages.zip
-  sha256: e7309296255dd3e8526a6f8ea7f72a050b6b1f1f888ffc532652cb5903c74a8f
+  sha256: c274c512d7081b46981ead964e869ab18518c2457d98efad88cfd80f7ec65139
   requires:
     - TetraxUserscriptLibrary
 - id: TetraxUserscriptLibrary
@@ -46,12 +46,12 @@
   version: 1.0-e2e174e
   date: 2024-02-04 22:13:05
   path: TetraxUserscriptLibrary.zip
-  sha256: 7d8dc9bb671eda82e708d6d986639b2c6825e1ae15d057a47a561875328581e8
+  sha256: 053a9dd4e424a77c15b2001d513312daf23ce1df13f61e431acbb9f97803f462
 - id: PlexBetterStyles
   name: Theme - Plex Better Styles
   metadata:
     description: A modified version of Stash-Plex theme
-  version: 1.0-e2e174e
-  date: 2024-02-04 22:13:05
+  version: 1.0-73c5dda
+  date: 2024-02-06 09:23:56
   path: PlexBetterStyles.zip
-  sha256: fdc49c5f156e5a335632e7434048ec08866bb95a49f7089a1bedb629471a66c2
+  sha256: bde6c0121b4992b63524d26d4d60f46cced1058a5826309eac8dad7038fa4c25
