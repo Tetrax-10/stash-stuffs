@@ -6,7 +6,7 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: AutoSelectUpdatablePluginsAndScrapers.zip
-  sha256: 93a45d933530512faa95d6f6c6ec05092e608d43fd999a7515d0bbf2c0d9f1ba
+  sha256: ae2bbbabd3a91eeac3644188183c8e2581316401f02b3ac0eaf2f39fc635dc1e
   requires:
     - TetraxUserscriptLibrary
 - id: AutoUpdatePluginsAndScrapers
@@ -16,27 +16,27 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: a8a6eba40c247c7cabbdf387b4c5dbf3ea3aeb48655abafbf273fe6a51a8579a
+  sha256: b1f8fc0b946563e301c21b75f44576562fd590d23d85fedd6d529cfe2d6be0b5
   requires:
     - TetraxUserscriptLibrary
 - id: PlayVideosInsteadOfPreviews
   name: Play Videos Instead of Previews
   metadata:
     description: Plays videos instead of previews in scene cards
-  version: 1.0-b82d377
-  date: 2024-02-08 03:47:48
+  version: 1.0-73e930b
+  date: 2024-02-08 08:44:22
   path: PlayVideosInsteadOfPreviews.zip
-  sha256: 00385aed3a4c73d17f2467d146dd3f71cf0390050f1947d09bc869db54d85825
+  sha256: e4200c94fa23222d2ea4e9f32fc3d3f5bf8980873cf9fb10ff448f6c7aa3abce
   requires:
     - TetraxUserscriptLibrary
 - id: ReplaceThumbnailsWithImages
   name: Replace Thumbnails With High-Res Images
   metadata:
     description: Replaces thumbnails with original high res images
-  version: 1.0-b82d377
-  date: 2024-02-08 03:47:48
+  version: 1.0-73e930b
+  date: 2024-02-08 08:44:22
   path: ReplaceThumbnailsWithImages.zip
-  sha256: 314361534163f26a068fa4fea0c76ef4fb7f4c53759d1e6aa1372d7eea82489e
+  sha256: 70c66981676f5a034776af3e53ff48ea408f42d295fe4f98b191cf1a37768d16
   requires:
     - TetraxUserscriptLibrary
 - id: TetraxUserscriptLibrary
@@ -46,7 +46,7 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: TetraxUserscriptLibrary.zip
-  sha256: 4ca5ba1d591dd7c0d4087f55a92249902694f110d138a651467d4fec3404c2a4
+  sha256: 5ae4c67fe37123c1c25b9b58b4bf143dd13b1322f0722ed10d1f3f403d35cf87
 - id: PlexBetterStyles
   name: Theme - Plex Better Styles
   metadata:
@@ -54,4 +54,4 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: PlexBetterStyles.zip
-  sha256: aa6a1a42af2da43c55a9fd2decd5a54eba440842995810d898a2e23f01b9964e
+  sha256: c833ad3a7befcc24cc8c8961c54cb5ae49a88de01274828ae2ba39076b3465db
