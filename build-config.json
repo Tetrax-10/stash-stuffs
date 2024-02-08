@@ -1,5 +1,6 @@
 {
     "plugins": ["Plugins/*", "Themes/*"],
     "outDir": "dist",
+    "stashPluginSubDir": "tetrax-repo",
     "include": ["README.md", "LICENSE"]
 }

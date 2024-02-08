@@ -2,6 +2,7 @@ id: PlexBetterStyles
 name: Theme - Plex Better Styles
 description: A modified version of Stash-Plex theme
 version: 1.0
+stashPluginSubDir: tetrax-repo
 ui:
     css: ./theme/main.scss
 include:

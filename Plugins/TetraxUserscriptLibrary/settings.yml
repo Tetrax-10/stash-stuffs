@@ -3,5 +3,6 @@ name: Tetrax Userscript Library
 description: Exports utility functions thats used in Tetrax's plugins
 url: https://github.com/Tetrax-10/stash-stuffs
 version: 1.0
+stashPluginSubDir: tetrax-repo
 ui:
     javascript: TetraxUserscriptLibrary.js

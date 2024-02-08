@@ -3,6 +3,7 @@ name: Play Videos Instead of Previews
 description: Plays videos instead of previews in scene cards
 url: https://github.com/Tetrax-10/stash-stuffs
 version: 1.0
+stashPluginSubDir: tetrax-repo
 ui:
     javascript: PlayVideosInsteadOfPreviews.js
     requires:

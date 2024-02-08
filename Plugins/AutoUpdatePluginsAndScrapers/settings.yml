@@ -3,6 +3,7 @@ name: Auto Update Plugins and Scrapers
 description: Automatically updates Plugins and Scrappers on website Startup
 url: https://github.com/Tetrax-10/stash-stuffs
 version: 1.0
+stashPluginSubDir: tetrax-repo
 ui:
     javascript: AutoUpdatePluginsAndScrapers.js
     requires:
