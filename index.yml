@@ -3,55 +3,55 @@
   metadata:
     description: Auto selects updatable Plugins and Scrapers when Check for Updates
       is clicked
-  version: 1.0-e2e174e
-  date: 2024-02-04 22:13:05
+  version: 1.0-b82d377
+  date: 2024-02-08 03:47:48
   path: AutoSelectUpdatablePluginsAndScrapers.zip
-  sha256: 2685dc645d80b594bf932a116f40fb81128ff95a2ab8ed7a75a2f335f6b6c015
+  sha256: 93a45d933530512faa95d6f6c6ec05092e608d43fd999a7515d0bbf2c0d9f1ba
   requires:
     - TetraxUserscriptLibrary
 - id: AutoUpdatePluginsAndScrapers
   name: Auto Update Plugins and Scrapers
   metadata:
     description: Automatically updates Plugins and Scrappers on website Startup
-  version: 1.0-e2e174e
-  date: 2024-02-04 22:13:05
+  version: 1.0-b82d377
+  date: 2024-02-08 03:47:48
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: eedcbe458e8255ff3c0c66395bdfe6136ad24828e3ae1ec65678dbf48de533a8
+  sha256: a8a6eba40c247c7cabbdf387b4c5dbf3ea3aeb48655abafbf273fe6a51a8579a
   requires:
     - TetraxUserscriptLibrary
 - id: PlayVideosInsteadOfPreviews
   name: Play Videos Instead of Previews
   metadata:
     description: Plays videos instead of previews in scene cards
-  version: 1.0-e2e174e
-  date: 2024-02-04 22:13:05
+  version: 1.0-b82d377
+  date: 2024-02-08 03:47:48
   path: PlayVideosInsteadOfPreviews.zip
-  sha256: 9a880b227fe5a2857be47350373b521f58a835ce65ab92669b0cd96f980d1aaa
+  sha256: 00385aed3a4c73d17f2467d146dd3f71cf0390050f1947d09bc869db54d85825
   requires:
     - TetraxUserscriptLibrary
 - id: ReplaceThumbnailsWithImages
   name: Replace Thumbnails With High-Res Images
   metadata:
     description: Replaces thumbnails with original high res images
-  version: 1.0-e2e174e
-  date: 2024-02-04 22:13:05
+  version: 1.0-b82d377
+  date: 2024-02-08 03:47:48
   path: ReplaceThumbnailsWithImages.zip
-  sha256: 99df8635300a23d64a17ce7864a1af59b3db4115511402dfb06a5277e08784a3
+  sha256: 314361534163f26a068fa4fea0c76ef4fb7f4c53759d1e6aa1372d7eea82489e
   requires:
     - TetraxUserscriptLibrary
 - id: TetraxUserscriptLibrary
   name: Tetrax Userscript Library
   metadata:
     description: Exports utility functions thats used in Tetrax's plugins
-  version: 1.0-e2e174e
-  date: 2024-02-04 22:13:05
+  version: 1.0-b82d377
+  date: 2024-02-08 03:47:48
   path: TetraxUserscriptLibrary.zip
-  sha256: 5bf18e4446a849d13881361d0fca44f9b93a1f8aa1a8382a808ed71338d5f40a
+  sha256: 4ca5ba1d591dd7c0d4087f55a92249902694f110d138a651467d4fec3404c2a4
 - id: PlexBetterStyles
   name: Theme - Plex Better Styles
   metadata:
     description: A modified version of Stash-Plex theme
-  version: 1.0-73c5dda
-  date: 2024-02-06 09:23:56
+  version: 1.0-b82d377
+  date: 2024-02-08 03:47:48
   path: PlexBetterStyles.zip
-  sha256: aab2599fdc910e07b2524f117be21529edeac9f28a826ccfbc860652f9373aa6
+  sha256: aa6a1a42af2da43c55a9fd2decd5a54eba440842995810d898a2e23f01b9964e
