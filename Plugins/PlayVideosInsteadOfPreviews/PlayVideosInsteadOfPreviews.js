@@ -14,7 +14,7 @@ export default async () => {
         })
     }
 
-    Stash.addEventListeners(["stash:page:scenes", "stash:page:any:scenes:grid"], () => {
+    Stash.addEventListeners(["stash:page:scenes:grid", "stash:page:any:scenes:grid"], () => {
         injectVideosAsPreview(5000)
     })
 }

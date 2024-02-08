@@ -14,10 +14,10 @@ export default async () => {
         })
     }
 
-    Stash.addEventListeners(["stash:page:images", "stash:page:gallery", "stash:page:gallery:add", "stash:page:home", "stash:page:any:images:grid"], () => {
+    Stash.addEventListeners(["stash:page:images:grid", "stash:page:any:images:grid", "stash:page:gallery", "stash:page:gallery:add", "stash:page:home"], () => {
         replaceThumbnailsWithImages(5000, ".image-card-preview-image")
     })
-    Stash.addEventListeners(["stash:page:galleries", "stash:page:home", "stash:page:any:galleries:grid"], () => {
+    Stash.addEventListeners(["stash:page:galleries:grid", "stash:page:any:galleries:grid", "stash:page:home"], () => {
         replaceThumbnailsWithImages(5000, ".gallery-card-image")
     })
     Stash.addEventListeners(["stash:page:galleries:list", "stash:page:any:galleries:list"], () => {
