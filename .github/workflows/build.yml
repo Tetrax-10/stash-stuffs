@@ -2,6 +2,8 @@ name: Build and Publish Plugins and Themes
 
 on:
     push:
+        branches:
+            - main
         paths:
             - .github/workflows/**
             - Plugins/**
@@ -31,7 +33,7 @@ jobs:
               run: npm ci
 
             - name: Build plugins and themes
-              run: npm run build-dist
+              run: npm run build-all-dist
 
             - name: Publish to dist branch
               uses: s0/git-publish-subdir-action@develop

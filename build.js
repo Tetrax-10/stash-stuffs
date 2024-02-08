@@ -1,8 +1,8 @@
 import fs from "fs"
 import path from "path"
 import parseArgs from "minimist"
+import SPB from "stash-plugin-builder"
 import { execSync } from "child_process"
-import { parse as parseYml, stringify as stringifyYml } from "yaml"
 import "dotenv/config"
 
 import config from "./build-config.json" assert { type: "json" }
@@ -20,57 +20,10 @@ config.mode.build = getArgv("build")
 config.mode.dist = getArgv("dist")
 
 if (config.mode.build) {
-    config.outDir = process.env.STASH_PLUGIN_DIR
+    config.outDir = path.join(process.env.STASH_PLUGIN_DIR, config.stashPluginSubDir ?? "")
 }
 
 class GlobModules {
-    getFileContents(filePath) {
-        return fs.readFileSync(filePath, "utf-8")
-    }
-
-    writeFile(filePath, content, append) {
-        if (!append) {
-            fs.writeFileSync(filePath, content)
-            return
-        }
-
-        fs.appendFileSync(filePath, content)
-    }
-
-    writeYml(filePath, content) {
-        this.writeFile(filePath, stringifyYml(content))
-    }
-
-    createFolder(folderPath) {
-        if (!this.fsExsists(folderPath)) {
-            fs.mkdirSync(folderPath, { recursive: true })
-        }
-    }
-
-    delete(filePath) {
-        try {
-            fs.rmSync(filePath, { recursive: true, force: true })
-        } catch (err) {
-            // do nothing
-        }
-    }
-
-    copy(src, dest, contents = false) {
-        if (!contents) dest = path.join(dest, path.basename(src))
-        fs.cpSync(src, dest, { recursive: true })
-    }
-
-    fsExsists(paths) {
-        if (typeof paths === "object") {
-            const availablePaths = []
-            for (const path of paths) {
-                if (fs.existsSync(path)) availablePaths.push(path)
-            }
-            return availablePaths
-        }
-        return fs.existsSync(paths)
-    }
-
     getYmlFiles(dirPath) {
         return fs
             .readdirSync(dirPath)
@@ -84,23 +37,13 @@ class GlobModules {
             ? (() => {
                   const id = path.basename(_path)
                   const yml = path.join(_path, `${id}.yml`)
-                  if (Glob.fsExsists(yml)) {
+                  if (SPB.Glob.fsExsists(yml)) {
                       return yml
                   } else {
                       return ymls[0]
                   }
               })()
             : ymls[0]
-    }
-
-    getYml(filePath) {
-        if (!this.fsExsists(filePath)) return null
-        try {
-            return parseYml(this.getFileContents(filePath))
-        } catch (err) {
-            console.error("Yml: parsing error", filePath)
-            return null
-        }
     }
 
     getChildDirs(source, relativePath = false) {
@@ -132,14 +75,14 @@ class UtilsModules {
                 isParentDir = true
             }
 
-            if (isParentDir && Glob.fsExsists(_path)) {
-                const recursivePluginPaths = this.getAllPluginFolders(Glob.fsExsists(Glob.getChildDirs(_path, true)))
+            if (isParentDir && SPB.Glob.fsExsists(_path)) {
+                const recursivePluginPaths = this.getAllPluginFolders(SPB.Glob.fsExsists(Glob.getChildDirs(_path, true)))
 
                 pluginPaths.normalPluginPaths.push(...recursivePluginPaths.normalPluginPaths)
                 pluginPaths.stashPluginBuilderPluginPaths.push(...recursivePluginPaths.stashPluginBuilderPluginPaths)
-            } else if (Glob.fsExsists(_path)) {
-                const isSettingsYmlPresent = Glob.fsExsists(path.join(_path, "settings.yml"))
-                const settingsYmlId = isSettingsYmlPresent ? Glob.getYml(path.join(_path, "settings.yml"))?.id : false
+            } else if (SPB.Glob.fsExsists(_path)) {
+                const isSettingsYmlPresent = SPB.Glob.fsExsists(path.join(_path, "settings.yml"))
+                const settingsYmlId = isSettingsYmlPresent ? SPB.Glob.getYml(path.join(_path, "settings.yml"))?.id : false
 
                 if (settingsYmlId) {
                     pluginPaths.stashPluginBuilderPluginPaths.push({
@@ -167,8 +110,8 @@ class UtilsModules {
 
         if (ymls.length) {
             const pluginYmlPath = Glob.getPluginYmlPath(pluginDistPath)
-            const pluginYmlData = Glob.getYml(pluginYmlPath)
-            const pluginRawYml = Glob.getFileContents(pluginYmlPath)
+            const pluginYmlData = SPB.Glob.getYml(pluginYmlPath)
+            const pluginRawYml = SPB.Glob.getFileContents(pluginYmlPath)
             const indexYmlChunk = {}
 
             indexYmlChunk.id = path.basename(pluginYmlPath, path.extname(pluginYmlPath))
@@ -194,7 +137,7 @@ class UtilsModules {
 
             return indexYmlChunk
         } else {
-            Glob.delete(pluginDistPath)
+            SPB.Glob.delete(pluginDistPath)
         }
     }
 
@@ -207,7 +150,7 @@ class UtilsModules {
                 isCopyContents = true
             }
 
-            if (Glob.fsExsists(_path)) Glob.copy(_path, dest, isCopyContents)
+            if (SPB.Glob.fsExsists(_path)) SPB.Glob.copy(_path, dest, isCopyContents)
         })
     }
 }
@@ -234,14 +177,15 @@ if (config.excludePluginFolders?.length) {
 }
 
 allPluginFolders.normalPluginPaths.forEach(({ pluginPath, pluginDistPath }) => {
-    Glob.copy(pluginPath, config.outDir)
+    SPB.Glob.copy(pluginPath, config.outDir)
+    console.log("built:", pluginPath)
     if (!isWin && config.mode.dist) indexYml.push(Utils.packPlugin(pluginPath, pluginDistPath)) // works only on linux
 })
 allPluginFolders.stashPluginBuilderPluginPaths.forEach(({ pluginPath, pluginDistPath }) => {
-    Shell.run(`npx stash-plugin-builder --in=${pluginPath} --out=${config.outDir}${config.mode.dist ? " --minify" : ""}`)
+    console.log(Shell.run(`npx stash-plugin-builder --in=${pluginPath} --out=${config.outDir}${config.mode.dist ? " --minify" : ""}`))
     if (!isWin && config.mode.dist) indexYml.push(Utils.packPlugin(pluginPath, pluginDistPath)) // works only on linux
 })
 
-if (indexYml.length && !isWin && config.mode.dist) Glob.writeYml(path.join(config.outDir, "index.yml"), indexYml)
+if (indexYml.length && !isWin && config.mode.dist) SPB.Glob.writeYml(path.join(config.outDir, "index.yml"), indexYml)
 
 if (config.include?.length && config.mode.dist) Utils.copyExternalFiles(config.include, config.outDir)

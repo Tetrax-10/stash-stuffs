@@ -5,12 +5,13 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "build": "stash-plugin-builder",
+        "build": "stash-plugin-builder --build",
         "watch": "stash-plugin-builder --watch",
-        "build-all": "node build.js --build",
-        "build-dist": "node build.js --dist"
+        "build-dist": "stash-plugin-builder --out=dist --minify",
+        "build-all": "node --no-warnings build.js --script --build",
+        "build-all-dist": "node --no-warnings build.js --script --dist"
     },
     "devDependencies": {
-        "stash-plugin-builder": "^0.0.12-alpha"
+        "stash-plugin-builder": "^1.0.0"
     }
 }
