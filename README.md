@@ -47,11 +47,11 @@ You can see the difference in sharpness, details and colors.
   </tr>
 </table>
 
-### 4. Play videos instead of previews
+### 4. Play video if preview not found
 
-Play videos instead of previews when hovered over scene cards. This works on mobile too.
+Plays video on scene card hover if preview is not found. This works on mobile too.
 
-![demo](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/play-videos-instead-of-previews/demo.gif)
+![demo](https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/assets/play-video-if-preview-not-found/demo.gif)
 
 </br>
 

@@ -10,7 +10,11 @@ export default async () => {
 
         const allPreviewElement = document.querySelectorAll(".scene-card-preview-video")
         allPreviewElement.forEach((element) => {
-            element.src = element.src.replace("/preview", "/stream")
+            fetch(element.src).then((res) => {
+                if (res.status !== 200) {
+                    element.src = element.src.replace("/preview", "/stream")
+                }
+            })
         })
     }
 

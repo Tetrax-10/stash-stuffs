@@ -1,0 +1,10 @@
+id: PlayVideoIfPreviewNotFound
+name: Play Video If Preview Not Found
+description: Plays video on scene card hover if preview is not found
+url: https://github.com/Tetrax-10/stash-stuffs
+version: 1.0
+stashPluginSubDir: tetrax-repo
+ui:
+    javascript: PlayVideoIfPreviewNotFound.js
+    requires:
+        - TetraxUserscriptLibrary
