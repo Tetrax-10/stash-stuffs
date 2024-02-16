@@ -1,9 +1,7 @@
 export default async () => {
-    while (!window.TetraxUSL?.stash) {
+    while (!window.stash) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
-
-    const Stash = window.TetraxUSL.stash
 
     function isDateLater(dateString1, dateString2) {
         const date1 = new Date(dateString1)
@@ -13,7 +11,7 @@ export default async () => {
 
     async function getUpdateablePlugins() {
         try {
-            const pluginsStatus = await Stash.callGQL({
+            const pluginsStatus = await stash.callGQL({
                 operationName: "InstalledPluginPackagesStatus",
                 variables: {},
                 query: `
@@ -51,7 +49,7 @@ export default async () => {
 
     async function updatePlugins(packages) {
         try {
-            await Stash.callGQL({
+            await stash.callGQL({
                 operationName: "UpdatePluginPackages",
                 variables: {
                     packages: packages,
@@ -68,7 +66,7 @@ export default async () => {
 
     async function getUpdateableScrapers() {
         try {
-            const scraperStatus = await Stash.callGQL({
+            const scraperStatus = await stash.callGQL({
                 operationName: "InstalledScraperPackagesStatus",
                 variables: {},
                 query: `
@@ -106,7 +104,7 @@ export default async () => {
 
     async function updateScrapers(packages) {
         try {
-            await Stash.callGQL({
+            await stash.callGQL({
                 operationName: "UpdateScraperPackages",
                 variables: {
                     packages: packages,

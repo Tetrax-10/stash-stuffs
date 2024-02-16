@@ -8,3 +8,5 @@ ui:
     javascript: ReplaceThumbnailsWithImages.js
     requires:
         - TetraxUserscriptLibrary
+        - id: StashUserscriptLibrary
+          source: https://stashapp.github.io/CommunityScripts/stable/index.yml

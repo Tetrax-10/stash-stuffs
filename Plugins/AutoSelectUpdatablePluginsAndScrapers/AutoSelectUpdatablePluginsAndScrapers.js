@@ -1,12 +1,10 @@
 export default async () => {
-    while (!window.TetraxUSL?.stash) {
+    while (!window.stash) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
 
-    const Stash = window.TetraxUSL.stash
-
     async function selectUpdatableItems() {
-        await Stash.waitForElement(".package-update-available .form-check > input", 10000, document.body, true)
+        await stash.waitForElement(".package-update-available .form-check > input", 10000, document.body, true)
 
         const updatableItems = document.querySelectorAll(".package-update-available .form-check > input")
         const tableBody = document.querySelector(".installed-packages tbody")
@@ -23,8 +21,8 @@ export default async () => {
         })
     }
 
-    Stash.addEventListeners(["stash:page:settings:metadata-providers", "stash:page:settings:plugins"], async () => {
-        const checkForUpdatesButton = await Stash.waitForElement(".installed-packages .btn.btn-primary", 3000, document.body, true)
+    stash.addEventListeners(["stash:page:settings:metadata-providers", "stash:page:settings:plugins"], async () => {
+        const checkForUpdatesButton = await stash.waitForElement(".installed-packages .btn.btn-primary", 3000, document.body, true)
         if (checkForUpdatesButton) {
             checkForUpdatesButton.addEventListener("click", () => {
                 selectUpdatableItems()
