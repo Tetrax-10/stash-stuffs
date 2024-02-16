@@ -6,7 +6,7 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: AutoSelectUpdatablePluginsAndScrapers.zip
-  sha256: 7de1462aa59bbf6ddd993d08b2ef8f2616b1af53c2a880a2a5b020aa08374f3b
+  sha256: c273c95037aa5f3841910c33aad3e6e242321e43d07b1f1e0977f264b846bd5b
   requires:
     - TetraxUserscriptLibrary
 - id: AutoUpdatePluginsAndScrapers
@@ -16,7 +16,7 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: c84f8e43c54b5925c98a75dfcd63df041fb5cbe165bcaf23a964aaef95c00a2e
+  sha256: 37139112729df12ce4044cb71e93ce1aec56f73b333746715474d2ef673f9e6b
   requires:
     - TetraxUserscriptLibrary
 - id: PlayVideoIfPreviewNotFound
@@ -26,7 +26,7 @@
   version: 1.0-ca92cca
   date: 2024-02-12 11:22:38
   path: PlayVideoIfPreviewNotFound.zip
-  sha256: 2782ee07f1b41f7c357a646d950dad836c8d79aa9540e53cc561e566b8ea1e07
+  sha256: 99210e94da86d09d69d1192ec234b9b6f4a44a14f7b418746c46eae897e982fe
   requires:
     - TetraxUserscriptLibrary
 - id: ReplaceThumbnailsWithImages
@@ -36,7 +36,7 @@
   version: 1.0-73e930b
   date: 2024-02-08 08:44:22
   path: ReplaceThumbnailsWithImages.zip
-  sha256: e71e653dfc4253d59095e3a9243d6cf7a3090d57bbf4bd08242a30d916433cf9
+  sha256: d6f3b9db166aeb559fa1b2ebcc7abb97898d55d7380b97aa90848b968c6c42ba
   requires:
     - TetraxUserscriptLibrary
 - id: TetraxUserscriptLibrary
@@ -46,12 +46,12 @@
   version: 1.0-b82d377
   date: 2024-02-08 03:47:48
   path: TetraxUserscriptLibrary.zip
-  sha256: 12de8de1452cb738820f96a75c0ab8f5da69ab020e6ff0265aa2bff0656d003f
+  sha256: a212da33435b07be91ad627bb400cbf8a51b97540db5bc2064858a50d32d65b7
 - id: PlexBetterStyles
   name: Theme - Plex Better Styles
   metadata:
     description: A modified version of Stash-Plex theme
-  version: 1.0-b82d377
-  date: 2024-02-08 03:47:48
+  version: 1.0-1d2bc48
+  date: 2024-02-16 16:29:11
   path: PlexBetterStyles.zip
-  sha256: 5379d521c315e38455809c159f760c07ed95db41c51753ec224594502085baa3
+  sha256: 51a0182f94974328a995f83b85d5514dd03b79a565ace458fa1e149b398d2f5f
