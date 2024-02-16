@@ -12,6 +12,6 @@
         "build-all-dist": "node --no-warnings build.js --script --dist"
     },
     "devDependencies": {
-        "stash-plugin-builder": "^1.0.0"
+        "stash-plugin-builder": "^1.0.1"
     }
 }
