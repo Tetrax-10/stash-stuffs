@@ -1,5 +1,8 @@
 {
     "scripts": {
+        "build": "stash-plugin-builder --build",
+        "watch": "stash-plugin-builder --watch",
+        "build-dist": "stash-plugin-builder --out=dist --minify",
         "watch-personal": "npm run build-personal -- --watch",
         "build-personal": "stash-plugin-builder --css=./theme/main-personal.scss"
     }
