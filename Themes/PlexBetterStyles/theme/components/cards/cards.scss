@@ -1,14 +1,14 @@
+// image card fit to image aspect ratio
+.image-card.card,
+.gallery-card.card {
+    width: unset !important;
+}
+
 // cards in mobile
 @media (max-width: 576px) {
     // fix scene cards height
     .scene-card-preview {
         height: auto !important;
-    }
-
-    // image card fit to image aspect ratio
-    .image-card.card,
-    .gallery-card.card {
-        width: unset;
     }
 
     // image card remove fixed height
@@ -33,12 +33,6 @@
 
 // cards in desktop
 @media (min-width: 576px) {
-    // image, gallery card fit to image aspect ratio
-    .image-card.card,
-    .gallery-card.card {
-        width: unset;
-    }
-
     // fix portrait previews height in cards
     .scene-card-preview {
         height: auto !important;

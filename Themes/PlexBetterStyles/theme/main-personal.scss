@@ -3,24 +3,3 @@
 @use "pages/pages";
 
 @use "personal/personal";
-
-.tag-card.card {
-    height: 75px;
-    width: 240px;
-
-    .card-section > a[href*="/tags/"] {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        .card-section-title {
-            height: 75px;
-            width: 240px;
-
-            .TruncatedText {
-                margin: auto;
-            }
-        }
-    }
-}

@@ -1,4 +1,26 @@
 // small tags in tags page
-.tag-card-header {
-    display: none;
+
+.tag-card.card {
+    height: 75px;
+    width: 205.143px;
+
+    .tag-card-header {
+        display: none;
+    }
+
+    .card-section > a[href*="/tags/"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .card-section-title {
+            height: 75px;
+            width: 205.143px;
+
+            .TruncatedText {
+                margin: auto;
+            }
+        }
+    }
 }

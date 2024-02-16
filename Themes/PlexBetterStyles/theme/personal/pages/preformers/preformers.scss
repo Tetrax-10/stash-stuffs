@@ -1,3 +1,8 @@
+// performer cards size
+.item-list-container .performer-card {
+    width: 290px !important;
+}
+
 // hide male performers from preformers tab
 .performer-card:has(svg[data-icon="mars"]) {
     display: none;

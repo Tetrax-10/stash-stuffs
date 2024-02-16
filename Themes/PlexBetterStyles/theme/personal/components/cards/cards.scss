@@ -11,7 +11,7 @@
 }
 
 // hide scene card studio
-.scene-studio-overlay {
+.studio-overlay {
     display: none;
 }
 
@@ -48,6 +48,11 @@
 // gallery card title extra margin
 .gallery-card .TruncatedText {
     margin: 5px 0;
+}
+
+// zoom-1 scene cards inside a section in any page
+.zoom-1.scene-card {
+    width: 366.5px !important;
 }
 
 // zoom-1 image cards inside a section in any page
