@@ -143,14 +143,25 @@ input[type="range"].zoom-slider:focus::-ms-fill-upper {
     color: #fff !important;
 }
 
-// hide all scrollbar
-html,
+// hide scene and other page scrollbar
 .tab-content,
 .scene-tabs {
     scrollbar-width: none !important;
 
     &::-webkit-scrollbar {
         display: none !important;
+    }
+}
+
+// scrollbar theming
+html {
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #2b2b2b;
+        border-radius: 6px;
     }
 }
 
