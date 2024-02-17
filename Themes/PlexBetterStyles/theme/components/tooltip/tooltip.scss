@@ -1,7 +1,7 @@
 // fix cards tooltips
 .popover {
     background-color: rgba(0, 0, 0, 0.3) !important;
-    backdrop-filter: blur(10px) saturate(60%);
+    backdrop-filter: blur(10px);
 }
 
 // fix no of images in gallery card and common tooltips
@@ -9,7 +9,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 .tooltip {
-    backdrop-filter: blur(10px) saturate(60%);
+    backdrop-filter: blur(10px);
     padding: 0;
     padding-top: 0.4rem;
 }
