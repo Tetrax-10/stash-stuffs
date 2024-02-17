@@ -91,6 +91,19 @@
     background-color: unset !important;
 }
 
+// tagger page search result
+.selected-result,
+.search-result,
+.search-result:hover {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+// tagger page select component
+.search-result .performer-select-active .react-select__control,
+.search-result .studio-select-active .react-select__control {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
 // rating ribbon
 .rating-banner {
     background-color: rgba(0, 0, 0, 0.4);
