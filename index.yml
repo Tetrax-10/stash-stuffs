@@ -6,7 +6,7 @@
   version: 1.0-2695b92
   date: 2024-02-16 16:57:24
   path: AutoSelectUpdatablePluginsAndScrapers.zip
-  sha256: 0a31244bcdaecaf2dc2253e24cee8ba58cc22bc2602efe8c215d607a85dff139
+  sha256: 80a4b931ec3634dd562676f2de40d04cfbd1147f41b1292c9e4deb50978e3238
   requires:
     - TetraxUserscriptLibrary
 - id: AutoUpdatePluginsAndScrapers
@@ -16,7 +16,7 @@
   version: 1.0-2695b92
   date: 2024-02-16 16:57:24
   path: AutoUpdatePluginsAndScrapers.zip
-  sha256: efcfa8a758c0a949be0c3af82d77af40e8df2fcef9aa992d3269498742bffbc3
+  sha256: 0d242da23e0106fd9b7c2256bdfb35864413bc292d6d702dc6bf0714e1e76072
   requires:
     - TetraxUserscriptLibrary
 - id: PlayVideoIfPreviewNotFound
@@ -26,7 +26,7 @@
   version: 1.0-2695b92
   date: 2024-02-16 16:57:24
   path: PlayVideoIfPreviewNotFound.zip
-  sha256: 3674bffc91d8264f4a08ed6c1f7fa0a6462691263c75130aaaf13fc80e358ba1
+  sha256: 362733feb68cd71a8271c9c385c56043c60c90b3a5436be7750222b667a7f2f8
   requires:
     - TetraxUserscriptLibrary
 - id: ReplaceThumbnailsWithImages
@@ -36,14 +36,14 @@
   version: 1.0-2695b92
   date: 2024-02-16 16:57:24
   path: ReplaceThumbnailsWithImages.zip
-  sha256: 1ae4a96b2e138b8d2de0f2e898b8f1ed258a6058314f4c31108716fe7c9948ed
+  sha256: 9db14ff87efb992532177022fd74f03405d2da521291cafef96a53d8d22b5b54
   requires:
     - TetraxUserscriptLibrary
 - id: PlexBetterStyles
   name: Theme - Plex Better Styles
   metadata:
     description: A modified version of Stash-Plex theme
-  version: 1.0-b05689f
-  date: 2024-02-16 19:05:42
+  version: 1.0-43a15f7
+  date: 2024-02-17 22:04:38
   path: PlexBetterStyles.zip
-  sha256: 2e071c246d9bf1c70945c87a80fdd784dab5d179c4984b8dc585d27a804b0460
+  sha256: 61a1cff2078b19dcd2b154ebf4a9def12cfa1e17f373cd64d3484dd113529e7a
