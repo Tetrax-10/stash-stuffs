@@ -1,0 +1,11 @@
+// active option (is)
+.modifier-options .modifier-option.selected {
+    background-color: #d49c21 !important;
+    font-weight: normal;
+}
+// not active option (is)
+.modifier-options .modifier-option {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: #eee !important;
+    font-weight: normal;
+}
