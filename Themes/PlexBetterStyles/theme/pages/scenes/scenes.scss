@@ -33,3 +33,15 @@
 .stash-id-pill a {
     background-color: rgba(0, 0, 0, 0.15);
 }
+
+// queue tab
+#queue-viewer {
+    // queue topbar
+    .queue-controls {
+        background-color: unset;
+    }
+    // current queue item
+    .current {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+}
