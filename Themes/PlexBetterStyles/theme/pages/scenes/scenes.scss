@@ -45,3 +45,16 @@
         background-color: rgba(0, 0, 0, 0.15);
     }
 }
+
+// list view heading
+.table-list table thead {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+// hover items
+.table-list tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+// alternative list items
+.table-striped tr:nth-child(odd) td {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+}
