@@ -71,6 +71,7 @@ code {
     border-color: rgba(0, 0, 0, 0.15) !important;
 }
 
+// settings page primary buttons
 #settings-container {
     .btn-primary:not(:disabled):not(.disabled):not(.collapse-button).active,
     .btn-primary:not(:disabled):not(.disabled):not(.collapse-button):active,
@@ -82,6 +83,7 @@ code {
     }
 }
 
+// settings page secondary buttons
 #settings-container {
     .btn-secondary {
         color: #000;
@@ -95,4 +97,10 @@ code {
 .bg-secondary {
     background-color: rgba(0, 0, 0, 0.15) !important;
     border: none !important;
+}
+
+// fix plugin link buttons
+.setting-section .setting > div > a.btn[target="_blank"] {
+    color: #f7c600 !important;
+    background-color: unset !important;
 }
