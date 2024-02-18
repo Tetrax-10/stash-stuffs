@@ -40,6 +40,16 @@ code {
     border-color: #d49c21;
     background-color: #d49c21;
 }
+// off toggle button
+.custom-control-label:before {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+// disabled toggle button
+.custom-control-input[disabled] ~ .custom-control-label:before,
+.custom-control-input:disabled ~ .custom-control-label:before {
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
 #settings-menu-container a:hover {
     color: #f7c600;
