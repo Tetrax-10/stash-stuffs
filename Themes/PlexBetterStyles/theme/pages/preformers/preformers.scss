@@ -18,10 +18,15 @@
     border-bottom: none;
 }
 
-// twitter
-.twitter {
-    &,
-    &:hover {
-        color: #1da1f2;
+// social media
+a.minimal.link.btn[target="_blank"][rel="noopener noreferrer"] {
+    &.twitter,
+    &.twitter:hover {
+        color: #1da1f2 !important;
+    }
+
+    &.instagram,
+    &.instagram:hover {
+        color: #ff498e !important;
     }
 }

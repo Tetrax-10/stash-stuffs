@@ -110,7 +110,7 @@ code {
 }
 
 // fix plugin link buttons
-.setting-section .setting > div > a.btn[target="_blank"] {
+a.minimal.link.btn[target="_blank"][rel="noopener noreferrer"] {
     color: #f7c600 !important;
     background-color: unset !important;
 }
