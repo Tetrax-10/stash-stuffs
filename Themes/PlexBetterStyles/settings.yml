@@ -5,5 +5,7 @@ version: 1.0
 stashPluginSubDir: tetrax-repo
 ui:
     css: ./theme/main.scss
+    assets:
+        /: assets
 include:
-    - ./assets/*
+    - ./assets
