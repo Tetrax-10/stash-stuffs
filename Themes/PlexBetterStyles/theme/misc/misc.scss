@@ -1,6 +1,6 @@
 // app background image
 body {
-    background-image: url("http://localhost:9999/plugin/PlexBetterStyles/assets/plex-background.png");
+    background-image: url("https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/Themes/PlexBetterStyles/assets/plex-background.png");
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -55,7 +55,7 @@ option {
 div.react-select__menu,
 div.dropdown-menu {
     background-color: unset !important;
-    background: url("http://localhost:9999/plugin/PlexBetterStyles/assets/plex-background.png") !important;
+    background: url("https://raw.githubusercontent.com/Tetrax-10/stash-stuffs/main/Themes/PlexBetterStyles/assets/plex-background.png") !important;
 }
 div.dropdown-menu .bg-secondary {
     background-color: unset !important;
