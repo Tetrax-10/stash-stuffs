@@ -11,12 +11,6 @@
     padding: 0.45rem 0.75rem;
 }
 
-// tagger button fix
-.btn-group > .btn:not(:first-child):has(svg[data-icon="tags"]) {
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
-}
-
 // toolbar button left border fix
 .btn-group > .btn:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
