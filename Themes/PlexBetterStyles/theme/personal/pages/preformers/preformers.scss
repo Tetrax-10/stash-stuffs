@@ -1,6 +1,8 @@
-// performer cards size
-.item-list-container .performer-card {
-    width: 290px !important;
+// performer cards size on desktop
+@media (min-width: 576px) {
+    .item-list-container .performer-card {
+        width: 290px !important;
+    }
 }
 
 // hide male performers from preformers tab
