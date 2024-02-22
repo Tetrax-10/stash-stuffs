@@ -9,3 +9,5 @@ ui:
         /: assets
 include:
     - ./assets
+externalPath:
+    - /plugin/PlexBetterStyles/assets/plex-background.png
