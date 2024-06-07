@@ -136,3 +136,10 @@
 .skeleton-card {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+// history progress bar in cards
+.grid-card .progress-indicator {
+    background-color: #d49c21;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
