@@ -1,5 +1,5 @@
 export default async () => {
-    while (!window.stash) {
+    while (!window.tetraxUSL?.utils) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
 
@@ -11,7 +11,7 @@ export default async () => {
 
     async function getUpdateablePlugins() {
         try {
-            const pluginsStatus = await stash.callGQL({
+            const pluginsStatus = await tetraxUSL.utils.callGQL({
                 operationName: "InstalledPluginPackagesStatus",
                 variables: {},
                 query: `
@@ -49,7 +49,7 @@ export default async () => {
 
     async function updatePlugins(packages) {
         try {
-            await stash.callGQL({
+            await tetraxUSL.utils.callGQL({
                 operationName: "UpdatePluginPackages",
                 variables: {
                     packages: packages,
@@ -66,7 +66,7 @@ export default async () => {
 
     async function getUpdateableScrapers() {
         try {
-            const scraperStatus = await stash.callGQL({
+            const scraperStatus = await tetraxUSL.utils.callGQL({
                 operationName: "InstalledScraperPackagesStatus",
                 variables: {},
                 query: `
@@ -104,7 +104,7 @@ export default async () => {
 
     async function updateScrapers(packages) {
         try {
-            await stash.callGQL({
+            await tetraxUSL.utils.callGQL({
                 operationName: "UpdateScraperPackages",
                 variables: {
                     packages: packages,

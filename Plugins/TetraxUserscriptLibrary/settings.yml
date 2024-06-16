@@ -1,0 +1,8 @@
+id: TetraxUserscriptLibrary
+name: Tetrax Userscript Library
+description: Utility library for Tetrax userscripts
+url: https://github.com/Tetrax-10/stash-stuffs
+version: 1.0
+stashPluginSubDir: tetrax-repo
+ui:
+    javascript: TetraxUserscriptLibrary.js

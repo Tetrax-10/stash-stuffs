@@ -1,10 +1,10 @@
 export default async () => {
-    while (!window.stash) {
+    while (!window.tetraxUSL?.page) {
         await new Promise((resolve) => setTimeout(resolve, 100))
     }
 
     async function injectVideosAsPreview(timeOut) {
-        await stash.waitForElement(".scene-card-preview-video", timeOut, document.body, true)
+        await tetraxUSL.page.waitForElement(".scene-card-preview-video", timeOut, document.body, true)
 
         const allPreviewElement = document.querySelectorAll(".scene-card-preview-video")
         allPreviewElement.forEach((element) => {
@@ -16,7 +16,7 @@ export default async () => {
         })
     }
 
-    stash.addEventListeners(["stash:page:scenes:grid", "stash:page:any:scenes:grid"], () => {
+    tetraxUSL.page.addEventListeners(["stash:page:scenes:grid", "stash:page:any:scenes:grid"], () => {
         injectVideosAsPreview(5000)
     })
 }
