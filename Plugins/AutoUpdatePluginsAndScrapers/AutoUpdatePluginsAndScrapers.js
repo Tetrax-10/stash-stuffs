@@ -1,6 +1,6 @@
 export default async () => {
     while (!window.tetraxUSL?.utils) {
-        await new Promise((resolve) => setTimeout(resolve, 100))
+        await new Promise((resolve) => setTimeout(resolve, 10))
     }
 
     function isDateLater(dateString1, dateString2) {
